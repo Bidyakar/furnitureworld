@@ -1,85 +1,54 @@
 "use client";
 
-import Image from "next/image";
+import Image from "./blur-image";
 
 const Hero = () => {
     return (
-        <section className="relative min-h-screen bg-[#2f5d57] flex items-center pt-20 pb-10 md:pt-0 md:pb-0">
-
-
-            {/* Background Model Image */}
-            <div className="absolute left-1/3 -translate-x-1/2  md:translate-x-0 md:right-100 top-1/2 -translate-y-1/2 w-56 sm:w-64 md:w-80 lg:w-[420px] h-[70vh] pointer-events-none">
+        <section className="relative w-full min-h-[90vh] bg-[#244d4d] overflow-hidden flex items-center justify-center py-20 pb-0">
+            {/* Background Arch Image */}
+            <div className="absolute top-[10%] w-[90vw] md:w-[60vw] lg:w-[700px] h-[90vh]  overflow-hidden z-0 animate-fade-in">
                 <Image
-                    src="/images/pp.webp"
-                    alt="Hero model"
+                    src="/small-hero.png"
+                    alt="Main Interior Arch"
                     fill
-                    className="object-contain"
+                    className="object-cover"
                     priority
                 />
             </div>
 
+            {/* Foreground Content Wrapper */}
+            <div className="max-w-[1320px] mx-auto w-full relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 px-6 pt-10 pb-20">
 
-            {/* Content Wrapper */}
-            <div className="relative z-10 mx-auto w-[90%] md:w-[80%] px-4 md:px-6 grid grid-cols-1 md:grid-cols-[45%_55%] gap-12 items-center">
+                {/* Left Side Content */}
+                <div className="flex flex-col justify-center gap-6 lg:gap-8 lg:-mt-32 text-center lg:text-left items-center lg:items-start">
+                    <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-bold leading-[1.1] font-serif tracking-tight animate-fade-in-up">
+                        Modern Interior <br className="hidden sm:block" /> Design Studio.
+                    </h1>
 
-                {/* LEFT CONTENT */}
-                <div className="flex flex-col gap-8">
-
-                    {/* Description Text */}
-                    <p className="text-white dark:text-white max-w-md leading-relaxed order-1 text-sm sm:text-base">
-                        Through innovative design and strategic thinking we create brands
-                        that spark connections, inspire loyalty, and elevate your message.
-                    </p>
-
-                    {/* CTA Button */}
-                    <button
-                        className="order-2 w-fit px-6 py-3 bg-white text-black dark:bg-white dark:text-black text-sm font-medium inline-flex items-center gap-2 hover:opacity-80 transition-opacity"
-                        onClick={() => window.open('https://wa.me/981561420-', '_blank')}
-                    >
-                        LET&apos;S CONTACT
-                        <span className="w-2 h-2 bg-orange-500 rounded-full" />
+                    <button className="w-max px-10 py-4 bg-[black] text-white border border-white/20 hover:bg-white hover:text-black transition-all duration-300 text-sm font-semibold tracking-widest mt-4 animate-fade-in-up delay-200 uppercase shadow-2xl">
+                        Explore Now
                     </button>
-
-                    {/* Video Card (comes LAST on mobile) */}
-                    <div className="order-3 md:order-none w-full max-w-xs rounded-xl mt-8 md:mt-20 overflow-hidden border border-gray-300 dark:border-white/20 transition-colors">
-
-                        <div className="relative">
-                            <Image
-                                src="/subashdemo.webp"
-                                alt="Video preview"
-                                width={320}
-                                height={420}
-                                className="object-cover w-full h-auto"
-                            />
-
-                            {/* Overlay */}
-
-                        </div>
-                    </div>
-
-
                 </div>
 
-                {/* RIGHT CONTENT */}
+                {/* Right Side Content */}
+                <div className="flex flex-col items-center lg:items-end lg:mt-48 xl:-mr-10">
+                    <div className="w-full max-w-[500px]">
+                        <p className="text-white text-2xl sm:text-3xl lg:text-[2.2rem] font-bold leading-tight mb-10 font-serif animate-fade-in-up delay-100 text-center lg:text-right">
+                            We make the <span className="underline decoration-2 underline-offset-8">Unique</span> <br />
+                            & <span className="underline decoration-2 underline-offset-8">Modern</span> Stylish<br />
+                            Furniture.
+                        </p>
 
-                <div className="text-left md:text-right">
-                    <h1 className="text-[2rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[5rem] font-extrabold leading-tight">
-                        <span className="inline-block bg-gradient-to-r from-slate-700 via-slate-600 to-slate-700 dark:from-slate-300 dark:via-slate-200 dark:to-slate-300 bg-clip-text text-transparent animate-gradient">
-                            CRAFTING
-                        </span>
-                        <br />
-                        <span className="inline-block bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 dark:from-gray-300 dark:via-gray-200 dark:to-gray-300 bg-clip-text text-transparent">
-                            A JOURNEY
-                        </span>
-                        <br />
-                        <span className="inline-block bg-gradient-to-r from-slate-600 via-gray-600 to-slate-600 dark:from-slate-200 dark:via-gray-200 dark:to-slate-200 bg-clip-text text-transparent">
-                            OF GROWTH
-                        </span>
-                        <br />
-                        <span className="inline-block bg-gradient-to-r from-gray-800 via-slate-700 to-gray-800 dark:from-gray-200 dark:via-slate-300 dark:to-gray-200 bg-clip-text text-transparent">
-                            AND SUCCESS
-                        </span>
-                    </h1>
+                        {/* Floating Small Image */}
+                        <div className="relative w-full lg:w-[110%] lg:-ml-[10%] aspect-[16/10] shadow-2xl overflow-hidden mt-6 bg-[#244d4d] animate-fade-in-up delay-300 rounded-sm">
+                            <Image
+                                src="/main-hero.png"
+                                alt="Small Modern Interior Detail"
+                                fill
+                                className="object-cover"
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
