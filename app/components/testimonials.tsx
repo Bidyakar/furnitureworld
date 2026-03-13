@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "./blur-image";
+import TextReveal from "./text-reveal";
+import ScrollReveal from "./scroll-reveal";
 
 const Testimonials = () => {
     return (
@@ -8,19 +10,22 @@ const Testimonials = () => {
             <div className="max-w-[1320px] mx-auto px-6 grid md:grid-cols-[1fr_1.1fr] gap-20 items-center">
                 
                 {/* Left Side: Quotes */}
-                <div className="flex flex-col justify-center animate-fade-in-up text-center md:text-left items-center md:items-start">
+                <div className="flex flex-col justify-center text-center md:text-left items-center md:items-start">
                     <h2 className="text-[#244d4d] text-4xl sm:text-5xl md:text-6xl font-serif font-bold leading-[1.15] mb-8 md:mb-12">
-                        Expressions of <br className="hidden sm:block" /> our happy Customer
+                        <TextReveal>Expressions of</TextReveal>
+                        <TextReveal delay={100}>our happy Customer</TextReveal>
                     </h2>
                     
                     {/* Stars */}
-                    <div className="flex gap-2 text-yellow-500 mb-8 text-xl">
-                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                    </div>
+                    <ScrollReveal delay={200}>
+                        <div className="flex gap-2 text-yellow-500 mb-8 text-xl">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                    </ScrollReveal>
 
-                    <p className="text-gray-600 font-medium text-base sm:text-lg md:text-xl leading-loose mb-10 md:mb-12 max-w-xl">
-                        &ldquo;Furniture World is one of the most popular furniture brands for those who want to explore premium aesthetics and try to make your home beautiful and provide the best design.&rdquo;
-                    </p>
+                    <div className="text-gray-600 font-medium text-base sm:text-lg md:text-xl leading-loose mb-10 md:mb-12 max-w-xl">
+                        <TextReveal delay={250}>&ldquo;Furniture World is one of the most popular furniture brands for those who want to explore premium aesthetics and try to make your home beautiful and provide the best design.&rdquo;</TextReveal>
+                    </div>
 
                     <div className="flex flex-col sm:flex-row items-center justify-between mt-4 w-full gap-8">
                         {/* Author */}
@@ -31,28 +36,35 @@ const Testimonials = () => {
                                     fill 
                                     className="object-cover" 
                                     alt="Bob Williams" 
+                                    revealDelay={300}
                                 />
                             </div>
                             <div className="text-left">
-                                <h4 className="font-bold text-[#244d4d] text-lg">Bob Williams</h4>
-                                <p className="text-sm text-gray-500 font-medium mt-1">Vergon Enterpirze</p>
+                                <h4 className="font-bold text-[#244d4d] text-lg">
+                                    <TextReveal delay={350}>Bob Williams</TextReveal>
+                                </h4>
+                                <div className="text-sm text-gray-500 font-medium mt-1">
+                                    <TextReveal delay={450}>Vergon Enterpirze</TextReveal>
+                                </div>
                             </div>
                         </div>
 
                         {/* Navigation Arrows */}
-                        <div className="flex gap-3">
-                            <button className="w-12 h-12 rounded-full border border-gray-200 text-[#244d4d] flex items-center justify-center hover:bg-[#244d4d] hover:text-white transition-all duration-300">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-                            </button>
-                            <button className="w-12 h-12 rounded-full border border-gray-200 text-[#244d4d] flex items-center justify-center hover:bg-[#244d4d] hover:text-white transition-all duration-300">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-                            </button>
-                        </div>
+                        <ScrollReveal delay={500}>
+                            <div className="flex gap-3">
+                                <button className="w-12 h-12 rounded-full border border-gray-200 text-[#244d4d] flex items-center justify-center hover:bg-[#244d4d] hover:text-white transition-all duration-300">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                                </button>
+                                <button className="w-12 h-12 rounded-full border border-gray-200 text-[#244d4d] flex items-center justify-center hover:bg-[#244d4d] hover:text-white transition-all duration-300">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                                </button>
+                            </div>
+                        </ScrollReveal>
                     </div>
                 </div>
 
                 {/* Right Side: Collage */}
-                <div className="relative h-[650px] w-full hidden md:block animate-fade-in delay-300">
+                <div className="relative h-[650px] w-full hidden md:block">
                     {/* Tall Left Image */}
                     <div className="absolute left-0 top-[5%] w-[48%] h-[85%] overflow-hidden rounded-[80px_15px_15px_80px] shadow-2xl z-10 transition-transform duration-700 hover:scale-[1.02]">
                         <Image 
@@ -60,6 +72,7 @@ const Testimonials = () => {
                             fill 
                             className="object-cover" 
                             alt="Comfortable bed structure" 
+                            revealDelay={200}
                         />
                     </div>
                     {/* Top Right Image */}
@@ -69,6 +82,7 @@ const Testimonials = () => {
                             fill 
                             className="object-cover" 
                             alt="Stylish modern dresser" 
+                            revealDelay={350}
                         />
                     </div>
                     {/* Bottom Right Image */}
@@ -78,6 +92,7 @@ const Testimonials = () => {
                             fill 
                             className="object-cover" 
                             alt="Stool and table set" 
+                            revealDelay={500}
                         />
                     </div>
                 </div>

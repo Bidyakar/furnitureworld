@@ -26,7 +26,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Custom Page Load Animations with hardware acceleration */
+/* Custom Page Load Animations */
 @keyframes fade-in-up {
   0% {
     opacity: 0;
@@ -43,26 +43,23 @@ body {
   100% { opacity: 1; }
 }
 
+@keyframes loading {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
 .animate-fade-in-up {
-  animation: fade-in-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: fade-in-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   opacity: 0;
   transform-style: preserve-3d;
   will-change: transform, opacity;
 }
 
 .animate-fade-in {
-  animation: fade-in 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: fade-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   opacity: 0;
   will-change: opacity;
 }
-
-.delay-100 { animation-delay: 100ms; }
-.delay-200 { animation-delay: 200ms; }
-.delay-300 { animation-delay: 300ms; }
-.delay-400 { animation-delay: 400ms; }
-.delay-500 { animation-delay: 500ms; }
-.delay-700 { animation-delay: 700ms; }
-.delay-900 { animation-delay: 900ms; }
 
 /* 3D Premium Base Class */
 .perspective-3d {
@@ -72,5 +69,23 @@ body {
 }
 
 .perspective-3d:hover {
-  transform: translate3d(0px, -10px, 20px) scale3d(1.02, 1.02, 1);
+    transform: translate3d(0px, -10px, 20px) scale3d(1.02, 1.02, 1);
+}
+
+/* Reveal Parent Classes */
+.text-reveal {
+    overflow: hidden;
+    display: block;
+}
+
+.text-reveal-inner {
+    display: block;
+    transform: translateY(110%);
+    opacity: 0;
+    transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.5s ease-out;
+}
+
+.text-reveal-inner.active {
+    transform: translateY(0);
+    opacity: 1;
 }
