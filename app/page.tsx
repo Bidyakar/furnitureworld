@@ -5,6 +5,7 @@ import Image from "./components/blur-image";
 import TextReveal from "./components/text-reveal";
 import ScrollReveal from "./components/scroll-reveal";
 import Link from "next/link";
+import WhatWeProvideGrid from "./components/what-we-provide-grid";
 
 const services = [
   {
@@ -182,77 +183,7 @@ export default function Home() {
             </div>
 
             {/* GRID START */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
-
-              {/* LEFT SIDE */}
-              <div className="space-y-10 text-right">
-                <div>
-                  <h3 className="font-bold text-xl text-black">Home Interior</h3>
-                  <p className="text-gray-500 text-sm">
-                    Decoral is one of the most popular for those who want to explore the
-                  </p>
-                </div>
-
-                <div className="h-[0.5px] bg-black" />
-
-                <div>
-                  <h3 className="font-bold text-xl text-black">Office Interior</h3>
-                  <p className="text-gray-500 text-sm">
-                    Decoral is one of the most popular for those who want to explore the
-                  </p>
-                </div>
-
-                <div className="h-[0.5px] bg-black" />
-
-                <div>
-                  <h3 className="font-bold text-xl text-black ">Restaurant Interior</h3>
-                  <p className="text-gray-500 text-sm">
-                    Decoral is one of the most popular for those who want to explore the
-                  </p>
-                </div>
-              </div>
-
-              {/* CENTER IMAGE */}
-              <div className="flex justify-center">
-                <div className="relative w-[320px] h-[400px] md:w-[400px] md:h-[500px] group overflow-hidden rounded-sm">
-                  <Image
-                    src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=800"
-                    alt="Modern living room sofa"
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-              </div>
-
-              {/* RIGHT SIDE */}
-              <div className="space-y-10 text-left">
-                <div>
-                  <h3 className="font-bold text-xl text-black">Space Planning</h3>
-                  <p className="text-gray-500 text-sm">
-                    Decoral is one of the most popular for those who want to explore the
-                  </p>
-                </div>
-
-                <div className="h-[0.5px] bg-black" />
-
-                <div>
-                  <h3 className="font-bold text-xl text-black">Furniture Solutions</h3>
-                  <p className="text-gray-500 text-sm">
-                    Decoral is one of the most popular for those who want to explore the
-                  </p>
-                </div>
-
-                <div className="h-[0.5px] bg-black" />
-
-                <div>
-                  <h3 className="font-bold text-xl text-black">Color Design</h3>
-                  <p className="text-gray-500 text-sm">
-                    Decoral is one of the most popular for those who want to explore the
-                  </p>
-                </div>
-              </div>
-
-            </div>
+            <WhatWeProvideGrid />
             {/* GRID END */}
 
           </div>
