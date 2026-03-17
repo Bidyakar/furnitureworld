@@ -168,14 +168,104 @@ export default function Home() {
         </div>
       </div>
 
+      {/*What we provide section*/}
+      <ScrollReveal delay={200} className="w-full">
+        <div className="bg-white py-20">
+          <div className="max-w-[1300px] mx-auto px-6">
+
+            {/* Heading */}
+            <div className="text-center mb-16">
+              <h2 className="text-[#244d4d] text-4xl md:text-5xl font-serif font-bold leading-tight">
+                <TextReveal>What we provide in</TextReveal>
+                <TextReveal delay={100}>Furniture World</TextReveal>
+              </h2>
+            </div>
+
+            {/* GRID START */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
+
+              {/* LEFT SIDE */}
+              <div className="space-y-10 text-right">
+                <div>
+                  <h3 className="font-bold text-xl text-black">Home Interior</h3>
+                  <p className="text-gray-500 text-sm">
+                    Decoral is one of the most popular for those who want to explore the
+                  </p>
+                </div>
+
+                <div className="h-[0.5px] bg-black" />
+
+                <div>
+                  <h3 className="font-bold text-xl text-black">Office Interior</h3>
+                  <p className="text-gray-500 text-sm">
+                    Decoral is one of the most popular for those who want to explore the
+                  </p>
+                </div>
+
+                <div className="h-[0.5px] bg-black" />
+
+                <div>
+                  <h3 className="font-bold text-xl text-black ">Restaurant Interior</h3>
+                  <p className="text-gray-500 text-sm">
+                    Decoral is one of the most popular for those who want to explore the
+                  </p>
+                </div>
+              </div>
+
+              {/* CENTER IMAGE */}
+              <div className="flex justify-center">
+                <div className="relative w-[320px] h-[400px] md:w-[400px] md:h-[500px] group overflow-hidden rounded-sm">
+                  <Image
+                    src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=800"
+                    alt="Modern living room sofa"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+              </div>
+
+              {/* RIGHT SIDE */}
+              <div className="space-y-10 text-left">
+                <div>
+                  <h3 className="font-bold text-xl text-black">Space Planning</h3>
+                  <p className="text-gray-500 text-sm">
+                    Decoral is one of the most popular for those who want to explore the
+                  </p>
+                </div>
+
+                <div className="h-[0.5px] bg-black" />
+
+                <div>
+                  <h3 className="font-bold text-xl text-black">Furniture Solutions</h3>
+                  <p className="text-gray-500 text-sm">
+                    Decoral is one of the most popular for those who want to explore the
+                  </p>
+                </div>
+
+                <div className="h-[0.5px] bg-black" />
+
+                <div>
+                  <h3 className="font-bold text-xl text-black">Color Design</h3>
+                  <p className="text-gray-500 text-sm">
+                    Decoral is one of the most popular for those who want to explore the
+                  </p>
+                </div>
+              </div>
+
+            </div>
+            {/* GRID END */}
+
+          </div>
+        </div>
+      </ScrollReveal>
       {/* Why Choose Us Section */}
       <div className="bg-white py-24 md:py-32 overflow-hidden">
-        <div className="max-w-[1320px] mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-14 items-stretch">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-5 items-stretch">
 
             {/* Column 1 */}
-            <div className="flex flex-col items-center lg:items-start text-center lg:text-left h-full">
-              <h2 className="text-[#244d4d] text-4xl sm:text-5xl md:text-6xl font-serif font-bold leading-[1.1] mb-8 tracking-tight">
+            <div className="flex flex-col items-center lg:items-start text-center lg:text-left h-full max-w-6xl">
+              <h2 className="text-[#244d4d] text-4xl sm:text-4xl md:text-5xl font-serif font-bold leading-[1.1] mb-8 tracking-tight">
                 <TextReveal>Why people choose</TextReveal>
                 <TextReveal delay={100}>Furniture World</TextReveal>
               </h2>
@@ -183,37 +273,37 @@ export default function Home() {
                 <TextReveal delay={200}>Furniture World is one of the most popular furniture brands for those who want to explore premium aesthetics and try creating absolute comfort in their homes.</TextReveal>
               </div>
               <ScrollReveal delay={300} className="w-full">
-                <div className="w-full bg-[#f8f9fa] p-8 rounded-sm mb-12 group hover:bg-white hover:shadow-xl transition-all duration-500 border border-transparent hover:border-gray-100">
-                  <div className="flex flex-col sm:flex-row gap-6 items-center lg:items-start">
+                <div className="w-full bg-[#f8f9fa]  p-6 rounded-sm mb-10 group hover:bg-white hover:shadow-xl transition-all duration-500 border border-transparent hover:border-gray-100">
+                  <div className="flex flex-col sm:flex-row gap-5 items-center lg:items-start">
                     <div className="flex-shrink-0">
                       <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#244d4d" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" /><path d="m15 5 4 4" />
                       </svg>
                     </div>
                     <div className="text-left w-full">
-                      <h3 className="text-[24px] font-serif font-bold text-[#244d4d] mb-3 group-hover:text-black transition-colors">
+                      <h3 className="text-[24px] font-serif font-bold  height=40 text-[#244d4d] mb-3 group-hover:text-black transition-colors">
                         <TextReveal delay={400}>Modern Design</TextReveal>
                       </h3>
-                      <div className="text-gray-500 leading-[1.8] text-[15px]">
+                      <div className="text-gray-500 leading-[1.1] text-[15px]">
                         <TextReveal delay={500}>Furniture World is one of the most popular for those who want to explore the finest curated concepts globally.</TextReveal>
                       </div>
                     </div>
                   </div>
                 </div>
               </ScrollReveal>
-              <div className="relative w-full h-[350px] mt-auto group overflow-hidden rounded-sm">
+              <div className="relative w-full h-[230px] mt-auto pb-8 group overflow-hidden rounded-sm">
                 <Image src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=800" alt="Modern living room sofa" fill className="object-cover transition-transform duration-700 group-hover:scale-105" revealDelay={150} />
               </div>
             </div>
 
             {/* Column 2 */}
             <div className="flex flex-col items-center lg:items-start text-center lg:text-left h-full">
-              <div className="relative w-full h-[350px] mb-12 group overflow-hidden rounded-sm">
+              <div className="relative w-full h-[290px] mb-8 group overflow-hidden rounded-sm">
                 <Image src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=800" alt="Elegant Armchair" fill className="object-cover transition-transform duration-700 group-hover:scale-105" revealDelay={250} />
               </div>
-              <ScrollReveal delay={100} className="w-full flex-grow">
-                <div className="w-full bg-[#f8f9fa] p-8 rounded-sm mb-12 group hover:bg-white hover:shadow-xl transition-all duration-500 border border-transparent hover:border-gray-100">
-                  <div className="flex flex-col sm:flex-row gap-6 items-center lg:items-start">
+              <ScrollReveal delay={100} className=" flex-grow">
+                <div className="w-full bg-[#f8f9fa] p-6 rounded-sm mb-12 group hover:bg-white hover:shadow-xl transition-all duration-500 border border-transparent hover:border-gray-100">
+                  <div className="flex flex-col sm:flex-row gap-5 items-center lg:items-start">
                     <div className="flex-shrink-0">
                       <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#244d4d" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
                         <circle cx="12" cy="8" r="5" /><path d="M20 21a8 8 0 0 0-16 0" />
@@ -223,7 +313,7 @@ export default function Home() {
                       <h3 className="text-[24px] font-serif font-bold text-[#244d4d] mb-3 group-hover:text-black transition-colors">
                         <TextReveal delay={150}>Expert Team</TextReveal>
                       </h3>
-                      <div className="text-gray-500 leading-[1.8] text-[15px]">
+                      <div className="text-gray-500 leading-[1.1] text-[15px]">
                         <TextReveal delay={200}>Furniture World is one of the most popular for those who want to explore with world-class support and materials.</TextReveal>
                       </div>
                     </div>
@@ -231,18 +321,18 @@ export default function Home() {
                 </div>
               </ScrollReveal>
               <ScrollReveal delay={200} className="w-full">
-                <div className="w-full bg-[#f8f9fa] p-8 rounded-sm group hover:bg-white hover:shadow-xl transition-all duration-500 border border-transparent hover:border-gray-100">
+                <div className="w-full bg-[#f8f9fa] p-8 rounded-sm mb-8 group hover:bg-white hover:shadow-xl transition-all duration-500 border border-transparent hover:border-gray-100">
                   <div className="flex flex-col sm:flex-row gap-6 items-center lg:items-start">
                     <div className="flex-shrink-0">
                       <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#244d4d" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
                       </svg>
                     </div>
-                    <div className="text-left w-full">
+                    <div className="text-left  mb-10">
                       <h3 className="text-[24px] font-serif font-bold text-[#244d4d] mb-3 group-hover:text-black transition-colors">
                         <TextReveal delay={250}>Reasonable Price</TextReveal>
                       </h3>
-                      <div className="text-gray-500 leading-[1.8] text-[15px]">
+                      <div className="text-gray-500 leading-[1.1] text-[15px]">
                         <TextReveal delay={300}>Furniture World is one of the most popular for those who want to explore premium aesthetics affordably.</TextReveal>
                       </div>
                     </div>
@@ -252,17 +342,17 @@ export default function Home() {
             </div>
 
             {/* Column 3 */}
-            <div className="flex flex-col h-full lg:pl-6 pt-8 lg:pt-0">
-              <div className="relative w-full h-[500px] lg:h-full min-h-[500px] group overflow-hidden rounded-sm">
+            <div className="flex flex-col h-[96%] lg:pl-6 pt-8 lg:pt-0">
+              <div className="relative w-full h-[300px] lg:h-full min-h-[500px] group overflow-hidden rounded-sm">
                 <Image src="https://images.unsplash.com/photo-1505693314120-0d443867891c?auto=format&fit=crop&q=80&w=800" alt="Tall contemporary shelving unit" fill className="object-cover transition-transform duration-700 group-hover:scale-105" revealDelay={350} />
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </div >
 
       {/* Projects Section */}
-      <div className="w-full bg-[#f8f7f4] py-20">
+      < div className="w-full bg-[#f8f7f4] py-20" >
         <div className="max-w-[1320px] mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
 
@@ -306,7 +396,7 @@ export default function Home() {
             <div className="flex flex-col gap-4 h-full">
               <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-2">
                 <h2 className="text-3xl md:text-4xl lg:text-[2.6rem] font-bold font-serif text-[#1a3838] leading-tight">
-                  Explore our latest <span className="italic">Projects</span>
+                  Explore our latest <span className="italic">Products</span>
                 </h2>
                 <Link
                   href="/projects"
@@ -337,10 +427,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div >
 
       {/* Testimonials Section */}
-      <div className="bg-white py-24 md:py-32">
+      < div className="bg-white py-24 md:py-32" >
         <div className="max-w-[1320px] mx-auto px-6 grid md:grid-cols-[1fr_1.1fr] gap-20 items-center">
           <div className="flex flex-col justify-center text-center md:text-left items-center md:items-start">
             <h2 className="text-[#244d4d] text-4xl sm:text-5xl md:text-6xl font-serif font-bold leading-[1.15] mb-8 md:mb-12">
@@ -352,7 +442,7 @@ export default function Home() {
                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
               </div>
             </ScrollReveal>
-            <div className="text-gray-600 font-medium text-base sm:text-lg md:text-xl leading-loose mb-10 md:mb-12 max-w-xl">
+            <div className="text-gray-500 font-medium text-base sm:text-lg md:text-xl leading-loose mb-10 md:mb-8 max-w-xl">
               <TextReveal delay={250}>&ldquo;Furniture World is one of the most popular furniture brands for those who want to explore premium aesthetics and try to make your home beautiful and provide the best design.&rdquo;</TextReveal>
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-between mt-4 w-full gap-8">
@@ -379,21 +469,21 @@ export default function Home() {
           </div>
 
           <div className="relative h-[650px] w-full hidden md:block">
-            <div className="absolute left-0 top-[5%] w-[48%] h-[85%] overflow-hidden rounded-[80px_15px_15px_80px] shadow-2xl z-10 transition-transform duration-700 hover:scale-[1.02]">
+            <div className="absolute left-0 top-[5%] w-[48%] h-[70%] mt-30 overflow-hidden rounded-[80px_0px_80px_0px] shadow-2xl z-10 transition-transform duration-700 hover:scale-[1.02]">
               <Image src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&q=80&w=800" fill className="object-cover" alt="Comfortable bed structure" revealDelay={200} />
             </div>
-            <div className="absolute right-0 top-0 w-[45%] h-[40%] overflow-hidden rounded-[80px_0_0_0] shadow-xl transition-transform duration-700 hover:scale-[1.02]">
+            <div className="absolute right-5 top-0 w-[45%] h-[33%] overflow-hidden mt-37 rounded-[0px_80px_0px_0px] shadow-xl transition-transform duration-700 hover:scale-[1.02]">
               <Image src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&q=80&w=800" fill className="object-cover" alt="Stylish modern dresser" revealDelay={350} />
             </div>
-            <div className="absolute right-0 bottom-0 top-[45%] w-[48%] h-[45%] mt-auto overflow-hidden rounded-[80px_0px_15px_15px] shadow-xl transition-transform duration-700 hover:scale-[1.02]">
+            <div className="absolute right-5 bottom-0 top-[45%] w-[45%] h-[33%] mt-auto mb-15 overflow-hidden rounded-[0px_80px_0px_0px] shadow-xl transition-transform duration-700 hover:scale-[1.02]">
               <Image src="https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?auto=format&fit=crop&q=80&w=800" fill className="object-cover" alt="Stool and table set" revealDelay={500} />
             </div>
           </div>
         </div>
-      </div>
+      </div >
 
       {/* Blog Section */}
-      <div className="bg-white py-24">
+      < div className="bg-white py-24" >
         <div className="max-w-[1320px] mx-auto px-6">
           <div className="flex flex-col sm:flex-row justify-between items-center sm:items-end mb-16 border-b border-gray-200 pb-6 text-center sm:text-left gap-6">
             <h2 className="text-[#244d4d] text-4xl sm:text-5xl lg:text-6xl font-serif font-bold">
@@ -408,9 +498,10 @@ export default function Home() {
               <div className="text-xs text-gray-500 uppercase tracking-widest mb-4 font-semibold">
                 <TextReveal>OCTOBER 11, 2026 | BY - ALLEN BLICK</TextReveal>
               </div>
-              <h3 className="text-4xl lg:text-5xl font-serif font-bold text-[#244d4d] mb-6 leading-tight group-hover:text-black transition-colors max-w-2xl">
+              <h3 className="text-4xl lg:text-4xl font-serif font-bold text-[#244d4d] mb-6 leading-tight group-hover:text-black transition-colors max-w-2xl">
                 <TextReveal delay={100}>Seven tips to help you get better</TextReveal>
-                <TextReveal delay={200}>interior design & Concept</TextReveal>
+                <TextReveal delay={200}>furniture design & Concept furniture</TextReveal>
+
               </h3>
               <div className="text-gray-500 text-sm mb-10 md:mb-0 flex items-center gap-2 group-hover:text-[#244d4d] transition-colors uppercase tracking-widest font-bold">
                 <TextReveal delay={300}>Read more <span className="text-lg">→</span></TextReveal>
@@ -418,7 +509,7 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
               <div className="relative w-full aspect-[4/3] overflow-hidden rounded-sm">
-                <Image src="https://images.unsplash.com/photo-1540574163026-643ea20d25b5?auto=format&fit=crop&q=80&w=600" fill className="object-cover hover:scale-105 transition-transform duration-700" alt="Modern blue armchair" revealDelay={200} />
+                <Image src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=600" fill className="object-cover hover:scale-105 transition-transform duration-700" alt="Modern blue armchair" revealDelay={200} />
               </div>
               <div className="relative w-full aspect-[4/3] overflow-hidden rounded-sm">
                 <Image src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=600" fill className="object-cover hover:scale-105 transition-transform duration-700" alt="Stylish living room setup" revealDelay={350} />
@@ -426,29 +517,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div >
 
-      {/* Newsletter Section */}
-      <div className="bg-white py-32 text-center border-t border-gray-100">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-[#244d4d] text-4xl sm:text-5xl lg:text-[4rem] font-serif font-bold leading-[1.15] mb-8">
-            <TextReveal>Subscribe our Newsletter to get</TextReveal>
-            <TextReveal delay={100}>latest update and news</TextReveal>
-          </h2>
-          <div className="text-gray-500 mb-14 text-sm md:text-base leading-relaxed max-w-xl mx-auto font-medium">
-            <TextReveal delay={200}>We recommend you to subscribe to our newsletter, enter your email below to get our latest updates, news, promotions and so on.</TextReveal>
-          </div>
-          <ScrollReveal delay={300}>
-            <form className="flex w-full max-w-lg mx-auto border-b-2 border-gray-200 pb-3" onSubmit={(e) => e.preventDefault()}>
-              <input type="email" placeholder="Enter your email address" required className="flex-1 bg-transparent outline-none text-[#244d4d] font-semibold text-lg placeholder-gray-400" />
-              <button type="submit" className="text-gray-400 hover:text-[#244d4d] font-bold transition-colors">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
-              </button>
-            </form>
-          </ScrollReveal>
-        </div>
-      </div>
 
-    </main>
+
+    </main >
   );
 }

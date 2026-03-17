@@ -6,7 +6,7 @@ import ScrollReveal from "./scroll-reveal";
 
 const Hero = () => {
     return (
-        <section className="relative w-full min-h-[90vh] bg-[#244d4d] overflow-hidden flex items-center justify-center py-20 pb-0">
+        <section className="relative w-full min-h-[90vh] bg-[#244d4d] overflow-hidden flex items-center justify-center">
             {/* Background Arch Image */}
             <div className="absolute top-[10%] w-[90vw] md:w-[60vw] lg:w-[700px] h-[90vh]  overflow-hidden z-0">
                 <Image
@@ -23,8 +23,8 @@ const Hero = () => {
             <div className="max-w-[1320px] mx-auto w-full relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 px-6 pt-10 pb-20">
 
                 {/* Left Side Content */}
-                <div className="flex flex-col justify-center gap-6 lg:gap-8 lg:-mt-32 text-center lg:text-left items-center lg:items-start">
-                    <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] font-bold leading-[1.1] font-serif tracking-tight">
+                <div className="flex flex-col justify-center gap-6 lg:gap-8 lg:-mt-30 text-center lg:text-left items-center lg:items-start">
+                    <h1 className="text-white text-4xl sm:text-4xl md:text-6xl lg:text-[4rem] font-bold leading-[1.2] font-serif tracking-tight">
                         <TextReveal>Modern Furniture</TextReveal>
                         <TextReveal delay={100}>Design Studio.</TextReveal>
                     </h1>

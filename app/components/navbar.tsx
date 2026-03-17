@@ -6,7 +6,6 @@ import { useState, useEffect } from "react";
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isVisible, setIsVisible] = useState(true);
-    const [lastScrollY, setLastScrollY] = useState(0);
 
     useEffect(() => {
         const controlNavbar = () => {
@@ -16,21 +15,16 @@ export default function Navbar() {
                 } else {
                     setIsVisible(true);
                 }
-                setLastScrollY(window.scrollY);
             }
         };
 
         window.addEventListener('scroll', controlNavbar);
         return () => window.removeEventListener('scroll', controlNavbar);
-    }, [lastScrollY]);
+    }, []);
 
     return (
-        <header
-            className={`fixed top-0 left-0 w-full z-50 transition-transform duration-500 ${isVisible ? "translate-y-0" : "-translate-y-full"
-                }`}
-        >
-            {/* Centered container that controls the width AND background */}
-            <div className="w-[1150px] mx-auto bg-[#244d4d] px-6">
+        <header className={`fixed top-0 left-0 w-full z-50 bg-[#244d4d] transition-transform duration-500 ${isVisible ? "translate-y-0" : "-translate-y-full"}`}>
+            <div className="w-full max-w-[1150px] mx-auto px-6">
 
                 {/* Top Bar */}
                 <div className="flex justify-between items-center pt-6 pb-4 text-white text-sm">
@@ -67,19 +61,8 @@ export default function Navbar() {
                     {/* Desktop Menu */}
                     <nav className="hidden lg:block">
                         <ul className="flex items-center gap-8 text-[15px] font-serif font-bold text-white">
-                            <li className="relative group">
-                                <div className="flex items-center gap-1 cursor-pointer hover:text-yellow-400 transition-colors py-8">
-                                    Home
-                                    <svg className="w-2.5 h-2.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="3">
-                                        <path d="M19 9l-7 7-7-7" />
-                                    </svg>
-                                </div>
-                                <div className="absolute top-full left-0 w-48 bg-[#1a3838] border border-white/5 shadow-2xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                                    <Link href="/" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-yellow-400 text-sm">Home One</Link>
-                                    <Link href="/home-2" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-yellow-400 text-sm">Home Two</Link>
-                                </div>
-                            </li>
-                            <li><Link href="/project" className="hover:text-yellow-400 transition-colors">Project</Link></li>
+                            <li><Link href="/" className="hover:text-yellow-400 transition-colors">Home</Link></li>
+                            <li><Link href="/products" className="hover:text-yellow-400 transition-colors">Products</Link></li>
                             <li><Link href="/services" className="hover:text-yellow-400 transition-colors">Services</Link></li>
                             <li className="relative group">
                                 <div className="flex items-center gap-1 cursor-pointer hover:text-yellow-400 transition-colors py-8">
@@ -115,11 +98,11 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <div className="w-[1150px] mx-auto bg-[#1a3838] lg:hidden shadow-2xl border-t border-white/5">
+                <div className="w-full bg-[#1a3838] lg:hidden shadow-2xl border-t border-white/5">
                     <ul className="flex flex-col py-6">
                         <li><Link href="/" className="px-8 py-4 block hover:bg-[#244d4d] hover:text-yellow-400 transition-colors text-white font-medium border-b border-white/5">Home</Link></li>
                         <li><Link href="/about" className="px-8 py-4 block hover:bg-[#244d4d] hover:text-yellow-400 transition-colors text-white font-medium border-b border-white/5">About</Link></li>
-                        <li><Link href="/project" className="px-8 py-4 block hover:bg-[#244d4d] hover:text-yellow-400 transition-colors text-white font-medium border-b border-white/5">Project</Link></li>
+                        <li><Link href="/products" className="px-8 py-4 block hover:bg-[#244d4d] hover:text-yellow-400 transition-colors text-white font-medium border-b border-white/5">Products</Link></li>
                         <li><Link href="/services" className="px-8 py-4 block hover:bg-[#244d4d] hover:text-yellow-400 transition-colors text-white font-medium border-b border-white/5">Services</Link></li>
                         <li><Link href="/blog" className="px-8 py-4 block hover:bg-[#244d4d] hover:text-yellow-400 transition-colors text-white font-medium border-b border-white/5">Blog</Link></li>
                         <li><Link href="/contact" className="px-8 py-4 block hover:bg-[#244d4d] hover:text-yellow-400 transition-colors text-white font-medium">Contact</Link></li>
