@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/navbar";
+
 import Footer from "./components/footer";
 import Preloader from "./components/preloader";
 
@@ -25,6 +25,8 @@ export const metadata: Metadata = {
   description: "Developed by BB",
 };
 
+import { CartProvider } from "./components/cart-context";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -35,11 +37,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased`}
       >
-        <Navbar />
-        <main className="pt-[128px] md:pt-[140px]">
-          {children}
-        </main>
-        <Footer />
+        <CartProvider>
+          <main className="min-h-screen antialiased">
+            {children}
+          </main>
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );
