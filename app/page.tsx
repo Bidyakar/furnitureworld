@@ -100,11 +100,15 @@ const testimonials = [
 
 
 const categories = [
-  { name: "Chair", image: "/images/lamb1.jpg", subcategories: ["Armchair", "Lounge Chair", "Dining Chair"] },
-  { name: "Table", image: "/images/lr1.jpg", subcategories: ["Dining Table", "Coffee Table", "Side Table"] },
-  { name: "Bed", image: "/images/lr2.jpg", subcategories: ["Single Bed", "Double Bed", "King Size"] },
-  { name: "Wardrobe", image: "/images/lr3.jpg", subcategories: ["2-Door", "Sliding", "Walk-in"] },
-  { name: "Sofa", image: "/images/lr4.jpg", subcategories: ["2-Seater", "Sectional", "Sofa Bed"] },
+  { name: "Chair", image: "https://images.unsplash.com/photo-1592078615290-033ee584e267?auto=format&fit=crop&q=80&w=800", subcategories: ["Armchair", "Lounge Chair", "Dining Chair", "Accent Chair", "Office Chair"] },
+  { name: "Table", image: "https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?auto=format&fit=crop&q=80&w=800", subcategories: ["Dining Table", "Coffee Table", "Side Table", "Console Table", "Desk"] },
+  { name: "Bed", image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&q=80&w=800", subcategories: ["Single Bed", "Double Bed", "King Size", "Queen Size", "Bunk Bed"] },
+  { name: "Wardrobe", image: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&q=80&w=800", subcategories: ["2-Door", "Sliding", "Walk-in", "Modular", "Built-in"] },
+  { name: "Sofa", image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=800", subcategories: ["2-Seater", "Sectional", "Sofa Bed", "Loveseat", "Chaise"] },
+  { name: "Lighting", image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&q=80&w=800", subcategories: ["Pendant", "Chandelier", "Floor Lamp", "Table Lamp", "Wall Sconce"] },
+  { name: "Storage", image: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&q=80&w=800", subcategories: ["Bookshelf", "TV Stand", "Cabinet", "Sideboard", "Dresser"] },
+  { name: "Decor", image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800", subcategories: ["Mirrors", "Rugs", "Vases", "Art", "Planters"] },
+  { name: "Outdoor", image: "https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&q=80&w=800", subcategories: ["Patio Set", "Sun Lounger", "Outdoor Sofa", "Hammock", "Fire Pit"] }
 ];
 
 export default function Products() {
