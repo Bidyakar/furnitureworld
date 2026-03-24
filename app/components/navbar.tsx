@@ -63,7 +63,7 @@ export default function Navbar() {
                 <div className="h-[0.5px] bg-white/10" />
 
                 {/* Main Navigation */}
-                <div className="flex justify-between items-center pb-6 mt-4">
+                <div className="flex justify-between items-center pb-6">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2.5 group">
                         <div className="w-8 h-8 border-[1.5px] border-[#a58d71] rounded-sm flex items-center justify-center p-1 group-hover:bg-[#a58d71] transition-all">

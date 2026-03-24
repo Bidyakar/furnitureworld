@@ -426,55 +426,90 @@ export default function Products() {
         <div className="w-full bg-[#f8f7f4] py-20">
           <div className="max-w-[1320px] mx-auto px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+
+              {/* LEFT COLUMN */}
               <div className="flex flex-col gap-4">
+
+                {/* Large image */}
                 <div className="relative group overflow-hidden aspect-[4/3] cursor-pointer">
-                  <Image src={projects[0].image} alt={projects[0].title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <Image
+                    src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80&w=800"
+                    alt="Modern Kitchen Design"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
                   <div className="absolute bottom-0 left-6 mb-6">
                     <div className="bg-white/90 backdrop-blur-sm px-6 py-4 max-w-[320px]">
-                      <h3 className="text-lg font-bold font-serif text-[#1a3838]">{projects[0].title}</h3>
-                      <p className="text-sm text-gray-500 mt-1">{projects[0].description}</p>
+                      <h3 className="text-lg font-bold font-serif text-[#1a3838]">Modern Kitchen Design</h3>
+                      <p className="text-sm text-gray-500 mt-1">Decoral is one of the most popular for</p>
                     </div>
                   </div>
                 </div>
+
+                {/* Stats grid */}
                 <div className="grid grid-cols-2">
-                  {stats.map((stat, i) => (
+                  {[
+                    { value: "20", label: "Years of Experience", borderR: true, borderB: true },
+                    { value: "35", label: "Award Gained", borderR: false, borderB: true },
+                    { value: "42", label: "Team Members", borderR: true, borderB: false },
+                    { value: "1200+", label: "Projects Done", borderR: false, borderB: false },
+                  ].map(({ value, label, borderR, borderB }) => (
                     <div
-                      key={i}
+                      key={label}
                       className={`flex flex-col items-start justify-center py-8 px-8
-                        ${i % 2 === 0 ? "border-r border-dashed border-gray-300" : ""}
-                        ${i < 2 ? "border-b border-dashed border-gray-300" : ""}
-                      `}
+                ${borderR ? "border-r border-dashed border-gray-300" : ""}
+                ${borderB ? "border-b border-dashed border-gray-300" : ""}
+              `}
                     >
-                      <span className="text-5xl font-bold font-serif text-[#1a3838] leading-none">
-                        {stat.value}{parseInt(stat.value) >= 100 ? "+" : ""}
-                      </span>
-                      <span className="text-sm text-gray-500 mt-3 tracking-wide">{stat.label}</span>
+                      <span className="text-5xl font-bold font-serif text-[#1a3838] leading-none">{value}</span>
+                      <span className="text-sm text-gray-500 mt-3 tracking-wide">{label}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
+              {/* RIGHT COLUMN */}
               <div className="flex flex-col gap-4 h-full">
+
+                {/* Heading + View All */}
                 <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-2">
                   <h2 className="text-3xl md:text-4xl lg:text-[2.6rem] font-bold font-serif text-[#1a3838] leading-tight">
                     Explore our latest <span className="italic">Products</span>
                   </h2>
-                  <Link href="/projects" className="self-start sm:self-auto flex-shrink-0 px-6 py-3 border border-[#1a3838] text-[#1a3838] font-semibold text-sm tracking-widest uppercase hover:bg-[#1a3838] hover:text-white transition-all duration-300">
+                  <Link
+                    href="/projects"
+                    className="self-start sm:self-auto flex-shrink-0 px-6 py-3 border border-[#1a3838] text-[#1a3838] font-semibold text-sm tracking-widest uppercase hover:bg-[#1a3838] hover:text-white transition-all duration-300"
+                  >
                     View All
                   </Link>
                 </div>
+
+                {/* 2x2 image grid */}
                 <div className="grid grid-cols-2 gap-4 flex-1">
-                  {projects.slice(1).map((project) => (
-                    <div key={project.id} className="relative group overflow-hidden cursor-pointer min-h-[200px]">
-                      <Image src={project.image} alt={project.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                  {[
+                    { src: "https://images.unsplash.com/photo-1505693314120-0d443867891c?auto=format&fit=crop&q=80&w=800", alt: "Bedroom Retreat" },
+                    { src: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=800", alt: "Living Room Accent" },
+                    { src: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=800", alt: "Dining Elegance" },
+                    { src: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&q=80&w=800", alt: "Modern Office" },
+                  ].map(({ src, alt }) => (
+                    <div key={alt} className="relative group overflow-hidden cursor-pointer min-h-[200px]">
+                      <Image
+                        src={src}
+                        alt={alt}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
                       <div className="absolute inset-0 bg-[#1a3838]/0 group-hover:bg-[#1a3838]/50 transition-all duration-300 flex items-end p-4">
                         <div className="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                          <h3 className="text-white font-bold font-serif text-sm">{project.title}</h3>
+                          <h3 className="text-white font-bold font-serif text-sm">{alt}</h3>
                         </div>
                       </div>
                     </div>
                   ))}
                 </div>
+
               </div>
             </div>
           </div>

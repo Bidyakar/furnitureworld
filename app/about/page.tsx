@@ -4,8 +4,12 @@ import { useState, useEffect } from "react";
 import { useCart } from "../components/cart-context";
 import CartDrawer from "../components/cart-drawer";
 import Link from "next/link";
-import Image from "next/image";
 import ScrollReveal from "../components/scroll-reveal";
+import NextImage from "next/image";
+import Image from "next/image";
+import BlurImage from "../components/blur-image";
+
+
 
 export default function AboutPage() {
   const { cartCount } = useCart();
@@ -25,7 +29,7 @@ export default function AboutPage() {
       <section className="relative w-full h-[30vh] overflow-visible">
         {/* Background image - spans into the next section */}
         <div className="absolute inset-0 z-0 -bottom-[350px]">
-          <Image
+          <NextImage
             src="/images/lr1.jpg"
             alt="Living Room Furniture"
             fill
@@ -38,7 +42,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 -bottom-[350px] bg-[#244d4d]/85 z-10" />
 
         {/* Hero content */}
-        <div className="absolute inset-0 z-20 flex flex-col max-w-[1150px] mx-auto px-6">
+        <div className="absolute inset-0 z-[60] flex flex-col max-w-[1150px] mx-auto px-6">
 
           {/* Top bar */}
           <div className="flex justify-between items-center pt-6 pb-4 text-white text-sm font-medium">
@@ -55,10 +59,10 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="h-[0.5px] bg-white/30" />
+          <div className="w-full border-t border-white/30" />
 
           {/* Navbar */}
-          <div className="flex justify-between items-center pb-6 mt-4">
+          <div className="flex justify-between items-center pb-6 ">
             <Link href="/" className="flex items-center gap-2.5 group">
               <div className="w-8 h-8 border-[1.5px] border-[#a58d71] rounded-sm flex items-center justify-center p-1 group-hover:bg-[#a58d71] transition-all">
                 <svg className="w-full h-full text-[#a58d71] group-hover:text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -73,14 +77,14 @@ export default function AboutPage() {
                 <ul className="flex items-center gap-8 text-[15px] font-serif font-bold text-white">
                   <li><Link href="/" className="hover:text-yellow-400 transition-colors">Home</Link></li>
                   <li><Link href="/products" className="hover:text-yellow-400 transition-colors">Products</Link></li>
-                  <li className="relative group">
+                  <li className="relative group z-50">
                     <div className="flex items-center gap-1 cursor-pointer hover:text-yellow-400 transition-colors py-8">
                       Pages
                       <svg className="w-2.5 h-2.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="3">
                         <path d="M19 9l-7 7-7-7" />
                       </svg>
                     </div>
-                    <div className="absolute top-full left-0 w-48 bg-[#1a3838] border border-white/5 shadow-2xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                    <div className="absolute top-full left-0 w-48 bg-[#1a3838] border border-white/5 shadow-2xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                       <Link href="/about" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-yellow-400 text-sm">About Us</Link>
                       <Link href="/team" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-yellow-400 text-sm">Team</Link>
                       <Link href="/testimonial" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-yellow-400 text-sm">Testimonial</Link>
@@ -137,14 +141,16 @@ export default function AboutPage() {
         className="relative z-30"
         style={{ background: 'linear-gradient(to bottom, transparent 50%, #ffffff 50%)' }}
       >
-        <div className="max-w-[1000px] mx-auto px-6 py-16">
+        <div className="max-w-[1000px] mx-auto px-6 py-16 ">
           <ScrollReveal delay={200}>
-            <div className="relative w-full h-[400px] md:h-[550px] rounded-2xl md:rounded-3xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.25)]">
-              <Image
+            <div className="relative w-full h-[400px] md:h-[550px] mt-7 overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.25)]">
+              <BlurImage
                 src="/images/lr4.jpg"
                 alt="Living Room Furniture"
                 fill
-                className="object-cover hover:scale-105 transition-transform duration-700"
+                className="object-cover"
+
+                revealDelay={100}
               />
             </div>
           </ScrollReveal>
@@ -153,11 +159,90 @@ export default function AboutPage() {
 
       {/* ── OUR STORY SECTION ── */}
       <section className="bg-white pb-24">
-        <div className="max-w-[800px] mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#244d4d] mb-8">Our Story</h2>
-          <p className="text-gray-500 leading-relaxed text-lg md:text-xl">
-            We believe that furniture should be more than just functional. It should be an expression of your personality and a cornerstone of your daily comfort. Welcome to Furniture World.
-          </p>
+        <div className="w-full bg-[#f8f7f4] py-24 px-6 mb-24">
+          <div className="max-w-[1320px] mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+
+              {/* LEFT COLUMN - Stats only */}
+              <div className="flex flex-col gap-12">
+                <ScrollReveal delay={100}>
+                  <span className="text-[#a58d71] uppercase tracking-[0.4em] font-bold text-xs">Why Choose Us</span>
+                </ScrollReveal>
+
+                <div className="grid grid-cols-2">
+                  {[
+                    { value: "20", label: "Years of Craftsmanship", borderR: true, borderB: true },
+                    { value: "35", label: "Design Awards Won", borderR: false, borderB: true },
+                    { value: "42", label: "Expert Craftsmen", borderR: true, borderB: false },
+                    { value: "1200+", label: "Homes Furnished", borderR: false, borderB: false },
+                  ].map(({ value, label, borderR, borderB }) => (
+                    <div
+                      key={label}
+                      className={`flex flex-col items-start justify-center py-8 px-8
+                  ${borderR ? "border-r border-dashed border-gray-300" : ""}
+                  ${borderB ? "border-b border-dashed border-gray-300" : ""}
+                `}
+                    >
+                      <span className="text-5xl font-bold font-serif text-[#1a3838] leading-none">{value}</span>
+                      <span className="text-sm text-gray-500 mt-3 tracking-wide">{label}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* RIGHT COLUMN - Text only */}
+              <div className="flex flex-col gap-8">
+
+                <div className="flex flex-col gap-6">
+                  <ScrollReveal delay={100}>
+                    <span className="text-[#a58d71] uppercase tracking-[0.4em] font-bold text-xs">Our Promise</span>
+                  </ScrollReveal>
+
+                  <ScrollReveal delay={200}>
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-serif text-[#1a3838] leading-[1.1]">
+                      We furnish your home with{" "}
+                      <span className="italic text-[#a58d71]">timeless elegance</span>
+                    </h2>
+                  </ScrollReveal>
+
+                  <ScrollReveal delay={300}>
+                    <p className="text-gray-500 text-lg leading-relaxed max-w-xl">
+                      Furniture World is one of the most trusted furniture destinations for homeowners who want to elevate every room. We combine timeless craftsmanship with modern design sensibility — delivering pieces that are built to last and designed to impress.
+                    </p>
+                  </ScrollReveal>
+                </div>
+
+                {/* Feature list */}
+                <ScrollReveal delay={400}>
+                  <div className="flex flex-col gap-4">
+                    {[
+                      "Solid wood and premium materials built to last a lifetime",
+                      "Hundreds of styles from classic to contemporary",
+                      "Free in-home design consultation for every customer",
+                      "White-glove delivery and professional installation included",
+                    ].map((item) => (
+                      <div key={item} className="flex items-start gap-3">
+                        <span className="mt-1.5 w-2 h-2 rounded-full bg-[#a58d71] flex-shrink-0" />
+                        <p className="text-gray-600 text-[15px] leading-relaxed">{item}</p>
+                      </div>
+                    ))}
+                  </div>
+                </ScrollReveal>
+
+                <ScrollReveal delay={500}>
+                  <div className="pt-2">
+                    <Link
+                      href="/products"
+                      className="inline-block px-10 py-5 bg-[#1a3838] text-white text-[12px] font-bold uppercase tracking-[0.3em] hover:bg-[#a58d71] transition-all duration-500 shadow-xl"
+                    >
+                      Shop Our Collections
+                    </Link>
+                  </div>
+                </ScrollReveal>
+
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </>

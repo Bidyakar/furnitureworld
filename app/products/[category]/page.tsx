@@ -5,7 +5,7 @@ import React, { use } from "react";
 import ScrollReveal from "../../components/scroll-reveal";
 
 export default function CategoryPage({ params }: { params: Promise<{ category: string }> }) {
-    
+
     const { category } = use(params);
 
     const formatName = (slug: string) => {
@@ -101,7 +101,7 @@ export default function CategoryPage({ params }: { params: Promise<{ category: s
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                         {currentData.subcategories.map((sub, index) => (
                             <ScrollReveal key={sub} delay={index * 150}>
-                                <Link 
+                                <Link
                                     href={`/products/${category.toLowerCase()}/${sub.toLowerCase().replace(/\s+/g, '-')}`}
                                     className="group block"
                                 >
