@@ -36,6 +36,8 @@ const Team = () => {
         <section className="bg-[#f8f7f4] py-24 md:py-32 overflow-hidden">
             <div className="max-w-[1320px] mx-auto px-6">
 
+
+
                 {/* Section Header */}
                 <div className="text-center mb-20">
                     <TextReveal className="text-[#a58d71] uppercase font-bold tracking-widest text-sm mb-4">

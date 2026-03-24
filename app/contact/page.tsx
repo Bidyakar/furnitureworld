@@ -15,17 +15,7 @@ export default function ContactPage() {
 
 
 
-    const handleAddToCart = (item: any, catName: string) => {
-        const cartItem: CartItem = {
-            id: item.id || `${catName}-${item.name}`,
-            name: item.name,
-            price: item.price,
-            image: item.img || item.image,
-            quantity: 1,
-            category: catName
-        };
-        addToCart(cartItem);
-    };
+
 
     const [isCartOpen, setIsCartOpen] = useState(false);
 
@@ -42,7 +32,7 @@ export default function ContactPage() {
             <section className="relative w-full h-[80vh] mt-0 top-0 overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="/images/lr3.jpg"
+                        src="/images/lr4.jpg"
                         alt="Living Room Furniture"
                         fill
                         className="object-cover"

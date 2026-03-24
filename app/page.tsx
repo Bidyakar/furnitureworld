@@ -144,11 +144,7 @@ export default function Products() {
     <>
       <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
       {/* navbar */}
-      <section className="relative w-full h-[27vh] overflow-hidden">
-
-
-
-
+      <section className="relative w-full h-[27vh] z-50">
         <div className="absolute inset-0  flex flex-col max-w-[1150px] mx-auto px-6">
           {/* Top Bar */}
           <div className="flex justify-between items-center pt-6 pb-4 text-white text-sm font-medium">
@@ -201,7 +197,7 @@ export default function Products() {
                         <path d="M19 9l-7 7-7-7" />
                       </svg>
                     </div>
-                    <div className="absolute top-full left-0 w-48 bg-[#1a3838] border border-white/5 shadow-2xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                    <div className="absolute top-full left-0 w-48 bg-[#1a3838] border border-white/5 shadow-2xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[100]">
                       <Link href="/about" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-yellow-400 text-sm">About Us</Link>
                       <Link href="/team" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-yellow-400 text-sm">Team</Link>
                       <Link href="/testimonial" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-yellow-400 text-sm">Testimonial</Link>
