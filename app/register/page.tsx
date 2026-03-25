@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function RegisterPage() {
     return (
         <>
-            <div className="min-h-screen bg-[#f8f7f4] flex items-center justify-center p-6 font-serif">
+            <div className="min-h-screen bg-[#f8f7f4] flex items-center justify-center p-5 font-serif">
                 <div className="max-w-4xl w-full bg-white shadow-2xl rounded-lg overflow-hidden flex flex-col md:flex-row">
                     {/* Left Side - Image */}
                     <div className="relative w-full md:w-1/2 h-64 md:h-auto">
@@ -19,7 +19,7 @@ export default function RegisterPage() {
 
                     {/* Right Side - Form */}
                     <div className="w-full md:w-1/2 p-12 flex flex-col justify-center">
-                        <h2 className="text-3xl font-bold text-[#244d4d] mb-2">Welcome </h2>
+                        <h2 className="text-3xl font-bold text-[#244d4d] mb-2">Create New Account</h2>
                         <p className="text-gray-500 mb-8">Register your account</p>
 
                         <form className="space-y-4">
