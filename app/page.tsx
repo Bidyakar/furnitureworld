@@ -189,7 +189,6 @@ export default function Products() {
                 <ul className="flex items-center gap-8 text-[15px] font-serif font-bold text-white">
                   <li><Link href="/" className="hover:text-yellow-400 transition-colors">Home</Link></li>
                   <li><Link href="/products" className="hover:text-yellow-400 transition-colors ">Products</Link></li>
-                  <li><Link href="/services" className="hover:text-yellow-400 transition-colors">Services</Link></li>
                   <li className="relative group">
                     <div className="flex items-center gap-1 cursor-pointer hover:text-yellow-400 transition-colors py-8">
                       Pages
