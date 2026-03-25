@@ -7,14 +7,14 @@ import ScrollReveal from "../../../components/scroll-reveal";
 
 import { useCart, CartItem } from "../../../components/cart-context";
 
-import Navbar from "../../../components/navbar";
+
 
 export default function SubcategoryPage({ params }: { params: Promise<{ category: string, subcategory: string }> }) {
     const router = useRouter();
     const { addToCart } = useCart();
     const [selectedProduct, setSelectedProduct] = React.useState<any>(null);
     const [userRating, setUserRating] = React.useState(5);
-    
+
     // In Next 15+, we need to unwrap the params promise
     const { category, subcategory } = use(params);
 
@@ -85,11 +85,11 @@ export default function SubcategoryPage({ params }: { params: Promise<{ category
                 <div className="absolute inset-0 z-20 flex flex-col max-w-[1150px] mx-auto px-6">
                     <div className="flex justify-between items-center pt-6 pb-4 text-white text-sm font-medium">
                         <div className="hidden sm:block">
-                            Call us: <span className="text-yellow-400 font-medium">+012345 678 910</span>
+                            Call us: <span className="text-[#a58d71] font-medium">+012345 678 910</span>
                         </div>
                         <div className="flex items-center gap-6">
-                            <Link href="/products" className="hover:text-yellow-400 transition-colors uppercase tracking-widest text-[12px] font-bold text-white">All Products</Link>
-                            <Link href="/" className="hover:text-yellow-400 transition-colors uppercase tracking-widest text-[12px] font-bold text-white">Home</Link>
+                            <Link href="/products" className="hover:text-[#a58d71] transition-colors uppercase tracking-widest text-[12px] font-bold text-white">All Products</Link>
+                            <Link href="/" className="hover:text-[#a58d71] transition-colors uppercase tracking-widest text-[12px] font-bold text-white">Home</Link>
                         </div>
                     </div>
 
@@ -98,27 +98,27 @@ export default function SubcategoryPage({ params }: { params: Promise<{ category
                     <div className="flex-1 flex flex-col justify-center text-white">
                         <ScrollReveal>
                             <div className="text-center">
-                                <span className="text-yellow-400 uppercase tracking-[0.3em] font-bold text-[10px] mb-4 block">
+                                <span className="text-[#a58d71] uppercase tracking-[0.3em] font-bold text-[10px] mb-4 block">
                                     {selectedProduct ? "Product Detail" : "Collection"}
                                 </span>
                                 <h1 className="text-4xl md:text-6xl font-bold font-serif mb-6 leading-tight italic">
                                     {selectedProduct ? selectedProduct.name : subcategoryName}
                                 </h1>
                                 <div className="flex justify-center items-center gap-3 text-[11px] font-bold uppercase tracking-widest opacity-80">
-                                    <Link href="/" className="hover:text-yellow-400">Home</Link>
+                                    <Link href="/" className="hover:text-[#a58d71]">Home</Link>
                                     <span>/</span>
-                                    <Link href="/products" className="hover:text-yellow-400">Products</Link>
+                                    <Link href="/products" className="hover:text-[#a58d71]">Products</Link>
                                     <span>/</span>
-                                    <Link href={`/products/${category}`} className="hover:text-yellow-400">{categoryName}</Link>
+                                    <Link href={`/products/${category}`} className="hover:text-[#a58d71]">{categoryName}</Link>
                                     <span>/</span>
                                     {selectedProduct ? (
                                         <>
-                                            <button onClick={() => setSelectedProduct(null)} className="hover:text-yellow-400">{subcategoryName}</button>
+                                            <button onClick={() => setSelectedProduct(null)} className="hover:text-[#a58d71]">{subcategoryName}</button>
                                             <span>/</span>
-                                            <span className="text-yellow-400">{selectedProduct.name}</span>
+                                            <span className="text-[#a58d71]">{selectedProduct.name}</span>
                                         </>
                                     ) : (
-                                        <span className="text-yellow-400">{subcategoryName}</span>
+                                        <span className="text-[#a58d71]">{subcategoryName}</span>
                                     )}
                                 </div>
                             </div>
@@ -192,7 +192,7 @@ export default function SubcategoryPage({ params }: { params: Promise<{ category
                 <ScrollReveal>
                     <section className="py-24 px-6 bg-white min-h-[60vh]">
                         <div className="max-w-[1150px] mx-auto">
-                            <button 
+                            <button
                                 onClick={() => setSelectedProduct(null)}
                                 className="flex items-center gap-3 text-[#a58d71] text-[10px] font-bold uppercase tracking-widest mb-16 hover:text-[#244d4d] transition-colors group"
                             >
@@ -230,13 +230,13 @@ export default function SubcategoryPage({ params }: { params: Promise<{ category
                                     </div>
 
                                     <div className="flex flex-col gap-4">
-                                        <button 
+                                        <button
                                             onClick={() => handleBuyNow(selectedProduct)}
                                             className="w-full bg-[#244d4d] text-white py-6 text-[12px] font-bold uppercase tracking-[0.3em] text-center hover:bg-[#a58d71] transition-all shadow-xl"
                                         >
                                             Buy Now
                                         </button>
-                                        <button 
+                                        <button
                                             onClick={() => handleAddToCart(selectedProduct)}
                                             className="w-full bg-white border-2 border-[#244d4d] text-[#244d4d] py-6 text-[12px] font-bold uppercase tracking-[0.3em] hover:bg-[#244d4d] hover:text-white transition-all"
                                         >
@@ -297,7 +297,7 @@ export default function SubcategoryPage({ params }: { params: Promise<{ category
                                                                 key={star}
                                                                 type="button"
                                                                 onClick={() => setUserRating(star)}
-                                                                className={`transition-all duration-300 transform hover:scale-125 ${star <= userRating ? 'text-yellow-500' : 'text-gray-200 hover:text-yellow-200'}`}
+                                                                className={`transition-all duration-300 transform hover:scale-125 ${star <= userRating ? 'text-yellow-500' : 'text-gray-200 hover:text-[#a58d71]'}`}
                                                             >
                                                                 ★
                                                             </button>
@@ -327,7 +327,7 @@ export default function SubcategoryPage({ params }: { params: Promise<{ category
                                                     <h4 className="text-xl font-bold font-serif text-[#1a1a1a] mb-1">{review.name}</h4>
                                                     <span className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">{review.date}</span>
                                                 </div>
-                                                <div className="flex text-yellow-500 text-sm">
+                                                <div className="flex text-[#a58d71] text-sm">
                                                     {[...Array(review.rating)].map((_, j) => <span key={j}>★</span>)}
                                                     {[...Array(5 - review.rating)].map((_, j) => <span key={j} className="text-gray-200">★</span>)}
                                                 </div>

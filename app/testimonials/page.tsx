@@ -210,12 +210,12 @@ export default function Testimonials() {
                 <div className="absolute top-0 right-0 w-1/3 h-full bg-white/5 skew-x-12 translate-x-32" />
                 <div className="max-w-[1150px] mx-auto px-6 text-center relative z-10">
                     <ScrollReveal>
-                        <span className="text-yellow-400 uppercase tracking-[0.4em] font-bold text-xs mb-6 block">Join the Collection</span>
+                        <span className="text-[#a58d71] uppercase tracking-[0.4em] font-bold text-xs mb-6 block">Join the Collection</span>
                         <h2 className="text-4xl md:text-6xl font-serif font-bold text-white mb-10">Share Your <span className="italic">Furniture World</span> Story</h2>
                         <p className="text-white/60 text-lg max-w-2xl mx-auto mb-12 font-serif italic">
                             We take pride in every piece that finds a home. If we helped transform your space, we&apos;d love to hear from you.
                         </p>
-                        <button className="px-12 py-5 bg-white text-[#244d4d] font-bold uppercase tracking-[0.3em] text-xs hover:bg-yellow-400 transition-all shadow-2xl">
+                        <button className="px-12 py-5 bg-white text-[#244d4d] font-bold uppercase tracking-[0.3em] text-xs hover:bg-[#a58d71] transition-all shadow-2xl">
                             Write a Review
                         </button>
                     </ScrollReveal>

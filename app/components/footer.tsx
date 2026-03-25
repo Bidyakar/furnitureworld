@@ -15,13 +15,13 @@ export default function Footer() {
         {/* Column 1: Logo + About */}
         <div className="md:border-r border-white/20 pr-8 lg:pr-12">
           <h2 className="text-3xl font-serif font-bold text-white flex items-center gap-3">
-            <svg className="w-8 h-8 text-yellow-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg className="w-8 h-8 text-[#a58d71]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M3 10h18v6H3z" />
               <path d="M3 16v4" />
               <path d="M21 16v4" />
               <path d="M7 10V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v4" />
             </svg>
-            Furniture World
+            <Link href="/">Furniture World</Link>
           </h2>
 
           <div className="mt-8 text-sm text-gray-300 leading-relaxed font-medium">

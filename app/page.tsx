@@ -151,14 +151,14 @@ export default function Products() {
           <div className="flex justify-between items-center pt-6 pb-4 text-white text-sm font-medium">
             <div>
               Call us:
-              <a href="tel:12345678910" className="ml-1 text-yellow-400 hover:text-white transition-colors">
+              <a href="tel:12345678910" className="ml-1 text-[#a58d71] hover:text-white transition-colors">
                 +012345 678 910
               </a>
             </div>
             <div className="flex items-center gap-4">
-              <Link href="/login" className="hover:text-yellow-400 transition-colors">Login</Link>
+              <Link href="/login" className="hover:text-[#a58d71] transition-colors">Login</Link>
               <span className="opacity-30">/</span>
-              <Link href="/register" className="hover:text-yellow-400 transition-colors">Register</Link>
+              <Link href="/register" className="hover:text-[#a58d71] transition-colors">Register</Link>
             </div>
           </div>
 
@@ -168,7 +168,7 @@ export default function Products() {
           <div className="flex justify-between items-center pb-6 ">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2.5 group">
-              <div className="w-8 h-8 border-[1.5px] border-[#a58d71] rounded-sm flex items-center justify-center p-1 group-hover:bg-[#a58d71] transition-all">
+              <div className="w-8 h-8 border-[1.5px] border-[#a58d71] rounded-sm flex items-center justify-center p-1 group-hover:bg-[#a58d71] transition-all ">
                 <svg
                   className="w-full h-full text-[#a58d71] group-hover:text-white"
                   viewBox="0 0 24 24"
@@ -188,24 +188,24 @@ export default function Products() {
             <div className="hidden lg:flex items-center gap-10">
               <nav>
                 <ul className="flex items-center gap-8 text-[15px] font-serif font-bold text-white">
-                  <li><Link href="/" className="hover:text-yellow-400 transition-colors">Home</Link></li>
-                  <li><Link href="/products" className="hover:text-yellow-400 transition-colors ">Products</Link></li>
+                  <li><Link href="/" className="hover:text-[#a58d71] transition-colors">Home</Link></li>
+                  <li><Link href="/products" className="hover:text-[#a58d71] transition-colors ">Products</Link></li>
                   <li className="relative group">
-                    <div className="flex items-center gap-1 cursor-pointer hover:text-yellow-400 transition-colors py-8">
+                    <div className="flex items-center gap-1 cursor-pointer hover:text-[#a58d71] transition-colors py-8">
                       Pages
                       <svg className="w-2.5 h-2.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="3">
                         <path d="M19 9l-7 7-7-7" />
                       </svg>
                     </div>
                     <div className="absolute top-full left-0 w-48 bg-[#1a3838] border border-white/5 shadow-2xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[100]">
-                      <Link href="/about" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-yellow-400 text-sm">About Us</Link>
-                      <Link href="/team" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-yellow-400 text-sm">Team</Link>
-                      <Link href="/testimonials" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-yellow-400 text-sm">Testimonials</Link>
-                      <Link href="/blog" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-yellow-400 text-sm">Blog</Link>
-                      <Link href="/faq" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-yellow-400 text-sm">FAQ</Link>
+                      <Link href="/about" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-[#a58d71] text-sm">About Us</Link>
+                      <Link href="/team" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-[#a58d71] text-sm">Team</Link>
+                      <Link href="/testimonials" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-[#a58d71] text-sm">Testimonials</Link>
+                      <Link href="/blog" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-[#a58d71] text-sm">Blog</Link>
+                      <Link href="/faq" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-[#a58d71] text-sm">FAQ</Link>
                     </div>
                   </li>
-                  <li><Link href="/contact" className="hover:text-yellow-400 transition-colors">Contact</Link></li>
+                  <li><Link href="/contact" className="hover:text-[#a58d71] transition-colors">Contact</Link></li>
                 </ul>
               </nav>
 
@@ -214,11 +214,11 @@ export default function Products() {
                 onClick={() => (window as any).dispatchEvent(new CustomEvent('toggle-cart'))}
                 className="relative group p-2 hover:bg-white/10 rounded-full transition-all"
               >
-                <svg className="w-6 h-6 text-[#a58d71] group-hover:text-yellow-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-[#a58d71] group-hover:text-[#a58d71] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                 </svg>
                 {cartCount > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-yellow-400 text-[#244d4d] text-[10px] font-bold w-4.5 h-4.5 rounded-full flex items-center justify-center animate-bounce shadow-lg">
+                  <span className="absolute -top-1 -right-1 on-hover:text-white  bg-[#a58d71] text-[#244d4d] text-[10px] font-bold w-4.5 h-4.5 rounded-full flex items-center justify-center animate-bounce shadow-lg">
                     {cartCount}
                   </span>
                 )}
@@ -528,7 +528,7 @@ export default function Products() {
                   <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                 </div>
               </ScrollReveal>
-              
+
               {/* Dynamic Testimonial Display */}
               <div className="min-h-[200px]">
                 {testimonials.map((t, index) => (
@@ -552,13 +552,13 @@ export default function Products() {
               </div>
 
               <div className="flex gap-3 justify-center md:justify-start w-full mt-10">
-                <button 
+                <button
                   onClick={() => setActiveTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
                   className="w-12 h-12 rounded-full border border-gray-200 text-[#244d4d] flex items-center justify-center hover:bg-[#244d4d] hover:text-white transition-all duration-300"
                 >
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6" /></svg>
                 </button>
-                <button 
+                <button
                   onClick={() => setActiveTestimonial((prev) => (prev + 1) % testimonials.length)}
                   className="w-12 h-12 rounded-full border border-gray-200 text-[#244d4d] flex items-center justify-center hover:bg-[#244d4d] hover:text-white transition-all duration-300"
                 >

@@ -63,8 +63,8 @@ export default function CategoryPage({ params }: { params: Promise<{ category: s
                 <div className="absolute inset-0 z-20 flex flex-col max-w-[1108px] mx-auto">
                     <div className="flex justify-between items-center pt-8 pb-4 text-white text-sm">
                         <div className="flex items-center gap-6">
-                            <Link href="/products" className="hover:text-yellow-400 transition-colors uppercase tracking-widest text-[12px] font-bold">All Products</Link>
-                            <Link href="/" className="hover:text-yellow-400 transition-colors uppercase tracking-widest text-[12px] font-bold">Home</Link>
+                            <Link href="/products" className="hover:text-[#a58d71] transition-colors uppercase tracking-widest text-[12px] font-bold">All Products</Link>
+                            <Link href="/" className="hover:text-[#a58d71] transition-colors uppercase tracking-widest text-[12px] font-bold">Home</Link>
                         </div>
                     </div>
                     <div className="h-[0.5px] bg-white/20 mb-8" />
@@ -80,9 +80,9 @@ export default function CategoryPage({ params }: { params: Promise<{ category: s
                                     {currentData.desc}
                                 </p>
                                 <div className="flex justify-center items-center gap-3 text-sm font-medium tracking-wide">
-                                    <Link href="/products" className="opacity-80 hover:opacity-100 hover:text-yellow-400 transition-all underline decoration-[#a58d71] underline-offset-4">Products</Link>
+                                    <Link href="/products" className="opacity-80 hover:opacity-100 hover:text-[#a58d71] transition-all ">Products</Link>
                                     <span className="opacity-40">/</span>
-                                    <span className="text-yellow-400">{categoryName}</span>
+                                    <span className="text-[#a58d71]">{categoryName}</span>
                                 </div>
                             </div>
                         </ScrollReveal>
