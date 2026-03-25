@@ -36,9 +36,10 @@ const faqs = [
 ];
 
 export default function FAQPage() {
-    const [openIndex, setOpenIndex] = useState<number | null>(0);
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
     const { cartCount } = useCart();
     const [isCartOpen, setIsCartOpen] = useState(false);
+
 
     useEffect(() => {
         const handleToggle = () => setIsCartOpen(true);
@@ -47,15 +48,16 @@ export default function FAQPage() {
     }, []);
 
     return (
+
         <div className="bg-[#f8f7f4] min-h-screen font-serif">
             <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
 
             {/* ── HERO ── */}
-            <section className="relative w-full h-[35vh] overflow-hidden bg-[#244d4d]">
+            <section className="relative w-full h-[80vh] overflow-hidden bg-[#244d4d]">
                 <div className="absolute inset-0 opacity-20">
                     <NextImage src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=1200" alt="Furniture Background" fill className="object-cover" />
                 </div>
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 z-10">
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 z-10 h-2xl">
                     <ScrollReveal>
                         <span className="text-yellow-400 uppercase tracking-[0.4em] font-bold text-xs mb-4 block">Information Center</span>
                         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">Frequently Asked <span className="italic text-yellow-500/80">Questions</span></h1>
@@ -69,12 +71,12 @@ export default function FAQPage() {
             </section>
 
             {/* ── FAQ ACCORDION ── */}
-            <section className="max-w-[850px] mx-auto py-32 px-6">
+            <section className="max-w-[850px] mx-auto py-32 px-6 ">
                 <div className="space-y-4">
                     {faqs.map((faq, index) => (
                         <ScrollReveal key={index} delay={index * 100}>
                             <div className={`overflow-hidden transition-all duration-500 border ${openIndex === index ? 'border-[#244d4d] bg-white shadow-xl' : 'border-gray-100 bg-white/50'}`}>
-                                <button 
+                                <button
                                     onClick={() => setOpenIndex(openIndex === index ? null : index)}
                                     className="w-full px-8 py-7 flex items-center justify-between text-left group"
                                 >
@@ -82,7 +84,7 @@ export default function FAQPage() {
                                         {faq.question}
                                     </span>
                                     <span className={`flex-shrink-0 ml-4 transition-transform duration-500 ${openIndex === index ? 'rotate-180 text-[#a58d71]' : 'text-gray-300'}`}>
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
                                     </span>
                                 </button>
                                 <div className={`transition-all duration-500 ease-in-out ${openIndex === index ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0'}`}>
