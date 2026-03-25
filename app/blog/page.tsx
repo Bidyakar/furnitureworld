@@ -197,7 +197,7 @@ export default function BlogPage() {
           <ScrollReveal>
             <span className="text-[#a58d71] uppercase tracking-[0.4em] font-bold text-xs mb-6 block">Artisan Journal</span>
             <h1 className="text-5xl md:text-8xl font-bold text-[#244d4d] mb-8 leading-tight">
-              Insights & <span className="italic">Inspiration</span>
+              Insights & Inspiration
             </h1>
             <div className="h-[0.5px] bg-[#244d4d]/10 mx-auto w-1/4" />
           </ScrollReveal>
