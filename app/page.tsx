@@ -113,6 +113,7 @@ const categories = [
 
 export default function Products() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
   const { addToCart, cartCount } = useCart();
 
   const filteredCategories = categories.filter(cat =>
@@ -517,7 +518,7 @@ export default function Products() {
         {/* Testimonials Section */}
         <div className="bg-white py-24 md:py-32">
           <div className="max-w-[1320px] mx-auto px-6 grid md:grid-cols-[1fr_1.1fr] gap-20 items-center">
-            <div className="flex flex-col justify-center text-center md:text-left items-center md:items-start">
+            <div className="flex flex-col justify-center text-center md:text-left items-center md:items-start text-black">
               <h2 className="text-[#244d4d] text-4xl sm:text-5xl md:text-6xl font-serif font-bold leading-[1.15] mb-8 md:mb-12">
                 <TextReveal>Expressions of</TextReveal>
                 <TextReveal delay={100}>our happy Customer</TextReveal>
@@ -527,29 +528,42 @@ export default function Products() {
                   <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                 </div>
               </ScrollReveal>
-              <div className="text-gray-500 font-medium text-base sm:text-lg md:text-xl leading-loose mb-10 md:mb-8 max-w-xl">
-                <TextReveal delay={250}>&ldquo;Furniture World is one of the most popular furniture brands for those who want to explore premium aesthetics and try to make your home beautiful and provide the best design.&rdquo;</TextReveal>
+              
+              {/* Dynamic Testimonial Display */}
+              <div className="min-h-[200px]">
+                {testimonials.map((t, index) => (
+                  <div key={index} className={`${activeTestimonial === index ? 'block' : 'hidden'} animate-in fade-in slide-in-from-bottom-4 duration-700`}>
+                    <div className="text-gray-500 font-medium text-base sm:text-lg md:text-xl leading-loose mb-10 md:mb-8 max-w-xl">
+                      &ldquo;{t.quote}&rdquo;
+                    </div>
+                    <div className="flex flex-col sm:flex-row items-center justify-between mt-4 w-full gap-8">
+                      <div className="flex items-center gap-4">
+                        <div className="w-14 h-14 sm:w-16 sm:h-16 relative rounded-full overflow-hidden shadow-md">
+                          <Image src={t.avatar} fill className="object-cover" alt={t.name} />
+                        </div>
+                        <div className="text-left">
+                          <h4 className="font-bold text-[#244d4d] text-lg">{t.name}</h4>
+                          <div className="text-sm text-gray-500 font-medium mt-1">{t.company}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div className="flex flex-col sm:flex-row items-center justify-between mt-4 w-full gap-8">
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 relative rounded-full overflow-hidden shadow-md">
-                    <Image src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=200" fill className="object-cover" alt="Bob Williams" revealDelay={300} />
-                  </div>
-                  <div className="text-left">
-                    <h4 className="font-bold text-[#244d4d] text-lg"><TextReveal delay={350}>Bob Williams</TextReveal></h4>
-                    <div className="text-sm text-gray-500 font-medium mt-1"><TextReveal delay={450}>Vergon Enterpirze</TextReveal></div>
-                  </div>
-                </div>
-                <ScrollReveal delay={500}>
-                  <div className="flex gap-3">
-                    <button className="w-12 h-12 rounded-full border border-gray-200 text-[#244d4d] flex items-center justify-center hover:bg-[#244d4d] hover:text-white transition-all duration-300">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6" /></svg>
-                    </button>
-                    <button className="w-12 h-12 rounded-full border border-gray-200 text-[#244d4d] flex items-center justify-center hover:bg-[#244d4d] hover:text-white transition-all duration-300">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6" /></svg>
-                    </button>
-                  </div>
-                </ScrollReveal>
+
+              <div className="flex gap-3 justify-center md:justify-start w-full mt-10">
+                <button 
+                  onClick={() => setActiveTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
+                  className="w-12 h-12 rounded-full border border-gray-200 text-[#244d4d] flex items-center justify-center hover:bg-[#244d4d] hover:text-white transition-all duration-300"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6" /></svg>
+                </button>
+                <button 
+                  onClick={() => setActiveTestimonial((prev) => (prev + 1) % testimonials.length)}
+                  className="w-12 h-12 rounded-full border border-gray-200 text-[#244d4d] flex items-center justify-center hover:bg-[#244d4d] hover:text-white transition-all duration-300"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6" /></svg>
+                </button>
               </div>
             </div>
 
@@ -566,6 +580,7 @@ export default function Products() {
             </div>
           </div>
         </div>
+
 
         {/* Blog Section */}
         <div className="bg-white py-24">
