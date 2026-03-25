@@ -17,27 +17,27 @@ export default function CategoryPage({ params }: { params: Promise<{ category: s
 
     const categoryData: Record<string, { subcategories: string[], image: string, desc: string }> = {
         'chair': {
-            subcategories: ["Armchair", "Lounge Chair", "Dining Chair"],
+            subcategories: ["Armchair", "Lounge Chair", "Dining Chair", "Accent Chair", "Office Chair", "Wingback Chair", "Club Chair", "Eames Style", "Rocking Chair", "Recliner", "Papasan Chair", "Bergère", "Barrel Chair", "Chesterfield Chair", "Wishbone Chair", "Slipper Chair", "Director's Chair", "Parson's Chair", "Ghost Chair", "Bean Bag Chair"],
             image: "/images/lamb1.jpg",
             desc: "Discover our diverse collection of chairs, from cozy armchairs to ergonomic office seating and elegant dining sets."
         },
         'table': {
-            subcategories: ["Dining Table", "Coffee Table", "Side Table"],
+            subcategories: ["Dining Table", "Coffee Table", "Side Table", "Console Table", "Desk", "End Table", "Bistro Table", "Pedestal Table", "Trestle Table", "Farmhouse Table", "Drop-leaf Table", "Gateleg Table", "Nesting Tables", "Vanity Table", "Pub Table", "Counter Height", "Drafting Table", "Conference Table", "Gaming Table", "Outdoor Table"],
             image: "/images/lr1.jpg",
             desc: "The centerpiece of any room. Explore our selection of tables crafted for style, functionality, and lasting memories."
         },
         'bed': {
-            subcategories: ["Single Bed", "Double Bed", "King Size"],
+            subcategories: ["Single Bed", "Double Bed", "King Size", "Queen Size", "Bunk Bed", "Daybed", "Murphy Bed", "Canopy Bed", "Sleigh Bed", "Platform Bed", "Poster Bed", "Trundle Bed", "Divan Bed", "Cot Bed", "Storage Bed", "Adjustable Bed", "Four-Poster Bed", "Panel Bed", "Wingback Bed", "Loft Bed"],
             image: "/images/lr2.jpg",
             desc: "Designed for ultimate comfort and restful nights. Our beds range from minimal frames to grand statement pieces."
         },
         'wardrobe': {
-            subcategories: ["2-Door", "Sliding", "Walk-in"],
+            subcategories: ["2-Door", "Sliding", "Walk-in", "Modular", "Built-in", "Armoire", "Chiffonier", "Corner Wardrobe", "Mirrored Wardrobe", "Freestanding", "Open Wardrobe", "Jewelry Armoire", "Gent's Wardrobe", "Fitted Wardrobe", "Sliding Mirrored", "3-Door Wardrobe", "4-Door Wardrobe", "Industrial Style", "Minimalist Closet", "Luxury Walk-in"],
             image: "/images/lr3.jpg",
             desc: "Elegant storage solutions that organize your space without compromising on style. Modern designs for every bedroom."
         },
         'sofa': {
-            subcategories: ["2-Seater", "Sectional", "Sofa Bed"],
+            subcategories: ["2-Seater", "Sectional", "Sofa Bed", "Loveseat", "Chaise", "Chesterfield", "Lawson", "Tuxedo", "Mid-Century", "English Roll Arm", "Bridgewater", "Camelback", "Cabriole", "Divan", "Settee", "Daybed Sofa", "Power Recliner", "Modular Sofa", "Curved Sofa", "Outdoor Sofa"],
             image: "/images/lr4.jpg",
             desc: "The soul of the living room. Our sofas offer premium comfort in sectional, compact, and multi-functional designs."
         }

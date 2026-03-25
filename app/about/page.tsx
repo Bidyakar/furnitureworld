@@ -87,7 +87,7 @@ export default function AboutPage() {
                     <div className="absolute top-full left-0 w-48 bg-[#1a3838] border border-white/5 shadow-2xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                       <Link href="/about" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-yellow-400 text-sm">About Us</Link>
                       <Link href="/team" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-yellow-400 text-sm">Team</Link>
-                      <Link href="/testimonial" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-yellow-400 text-sm">Testimonial</Link>
+                      <Link href="/testimonials" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-yellow-400 text-sm">Testimonials</Link>
                       <Link href="/blog" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-yellow-400 text-sm">Blog</Link>
                       <Link href="/faq" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-yellow-400 text-sm">FAQ</Link>
                     </div>
@@ -145,7 +145,7 @@ export default function AboutPage() {
           <ScrollReveal delay={200}>
             <div className="relative w-full h-[400px] md:h-[550px] mt-7 overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.25)]">
               <BlurImage
-                src="/images/lr4.jpg"
+                src="/images/lr2.jpg"
                 alt="Living Room Furniture"
                 fill
                 className="object-cover"
@@ -164,30 +164,33 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
 
               {/* LEFT COLUMN - Stats only */}
-              <div className="flex flex-col gap-12">
+              <div className="flex flex-col gap-12 self-start">
                 <ScrollReveal delay={100}>
                   <span className="text-[#a58d71] uppercase tracking-[0.4em] font-bold text-xs">Why Choose Us</span>
                 </ScrollReveal>
+                <ScrollReveal delay={100}>
+                  <div className=" grid grid-cols-2">
 
-                <div className="grid grid-cols-2">
-                  {[
-                    { value: "20", label: "Years of Craftsmanship", borderR: true, borderB: true },
-                    { value: "35", label: "Design Awards Won", borderR: false, borderB: true },
-                    { value: "42", label: "Expert Craftsmen", borderR: true, borderB: false },
-                    { value: "1200+", label: "Homes Furnished", borderR: false, borderB: false },
-                  ].map(({ value, label, borderR, borderB }) => (
-                    <div
-                      key={label}
-                      className={`flex flex-col items-start justify-center py-8 px-8
+                    {[
+                      { value: "20", label: "Years of Craftsmanship", borderR: true, borderB: true },
+                      { value: "35", label: "Design Awards Won", borderR: false, borderB: true },
+                      { value: "42", label: "Expert Craftsmen", borderR: true, borderB: false },
+                      { value: "1200+", label: "Homes Furnished", borderR: false, borderB: false },
+                    ].map(({ value, label, borderR, borderB }) => (
+                      <div
+                        key={label}
+                        className={`flex flex-col items-start justify-center py-8 px-8
                   ${borderR ? "border-r border-dashed border-gray-300" : ""}
                   ${borderB ? "border-b border-dashed border-gray-300" : ""}
                 `}
-                    >
-                      <span className="text-5xl font-bold font-serif text-[#1a3838] leading-none">{value}</span>
-                      <span className="text-sm text-gray-500 mt-3 tracking-wide">{label}</span>
-                    </div>
-                  ))}
-                </div>
+                      >
+                        <span className="text-5xl font-bold font-serif text-[#1a3838] leading-none">{value}</span>
+                        <span className="text-sm text-gray-500 mt-3 tracking-wide">{label}</span>
+                      </div>
+                    ))}
+
+                  </div>
+                </ScrollReveal>
               </div>
 
               {/* RIGHT COLUMN - Text only */}
@@ -214,7 +217,8 @@ export default function AboutPage() {
 
                 {/* Feature list */}
                 <ScrollReveal delay={400}>
-                  <div className="flex flex-col gap-4">
+                  <div className="flex flex-col
+                  ">
                     {[
                       "Solid wood and premium materials built to last a lifetime",
                       "Hundreds of styles from classic to contemporary",

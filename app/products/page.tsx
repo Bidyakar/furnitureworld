@@ -7,15 +7,15 @@ import { useCart, CartItem } from "../components/cart-context";
 import CartDrawer from "../components/cart-drawer";
 
 const categories = [
-    { name: "Chair", image: "https://images.unsplash.com/photo-1592078615290-033ee584e267?auto=format&fit=crop&q=80&w=800", subcategories: ["Armchair", "Lounge Chair", "Dining Chair", "Accent Chair", "Office Chair"] },
-    { name: "Table", image: "https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?auto=format&fit=crop&q=80&w=800", subcategories: ["Dining Table", "Coffee Table", "Side Table", "Console Table", "Desk"] },
-    { name: "Bed", image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&q=80&w=800", subcategories: ["Single Bed", "Double Bed", "King Size", "Queen Size", "Bunk Bed"] },
-    { name: "Wardrobe", image: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&q=80&w=800", subcategories: ["2-Door", "Sliding", "Walk-in", "Modular", "Built-in"] },
-    { name: "Sofa", image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=800", subcategories: ["2-Seater", "Sectional", "Sofa Bed", "Loveseat", "Chaise"] },
-    { name: "Lighting", image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&q=80&w=800", subcategories: ["Pendant", "Chandelier", "Floor Lamp", "Table Lamp", "Wall Sconce"] },
-    { name: "Storage", image: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&q=80&w=800", subcategories: ["Bookshelf", "TV Stand", "Cabinet", "Sideboard", "Dresser"] },
-    { name: "Decor", image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800", subcategories: ["Mirrors", "Rugs", "Vases", "Art", "Planters"] },
-    { name: "Outdoor", image: "https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&q=80&w=800", subcategories: ["Patio Set", "Sun Lounger", "Outdoor Sofa", "Hammock", "Fire Pit"] }
+    { name: "Chair", image: "https://images.unsplash.com/photo-1592078615290-033ee584e267?auto=format&fit=crop&q=80&w=800", subcategories: ["Armchair", "Lounge Chair", "Dining Chair", "Accent Chair", "Office Chair", "Wingback Chair", "Club Chair", "Eames Style", "Rocking Chair", "Recliner", "Papasan Chair", "Bergère", "Barrel Chair", "Chesterfield Chair", "Wishbone Chair", "Slipper Chair", "Director's Chair", "Parson's Chair", "Ghost Chair", "Bean Bag Chair"] },
+    { name: "Table", image: "https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?auto=format&fit=crop&q=80&w=800", subcategories: ["Dining Table", "Coffee Table", "Side Table", "Console Table", "Desk", "End Table", "Bistro Table", "Pedestal Table", "Trestle Table", "Farmhouse Table", "Drop-leaf Table", "Gateleg Table", "Nesting Tables", "Vanity Table", "Pub Table", "Counter Height", "Drafting Table", "Conference Table", "Gaming Table", "Outdoor Table"] },
+    { name: "Bed", image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&q=80&w=800", subcategories: ["Single Bed", "Double Bed", "King Size", "Queen Size", "Bunk Bed", "Daybed", "Murphy Bed", "Canopy Bed", "Sleigh Bed", "Platform Bed", "Poster Bed", "Trundle Bed", "Divan Bed", "Cot Bed", "Storage Bed", "Adjustable Bed", "Four-Poster Bed", "Panel Bed", "Wingback Bed", "Loft Bed"] },
+    { name: "Wardrobe", image: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&q=80&w=800", subcategories: ["2-Door", "Sliding", "Walk-in", "Modular", "Built-in", "Armoire", "Chiffonier", "Corner Wardrobe", "Mirrored Wardrobe", "Freestanding", "Open Wardrobe", "Jewelry Armoire", "Gent's Wardrobe", "Fitted Wardrobe", "Sliding Mirrored", "3-Door Wardrobe", "4-Door Wardrobe", "Industrial Style", "Minimalist Closet", "Luxury Walk-in"] },
+    { name: "Sofa", image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=800", subcategories: ["2-Seater", "Sectional", "Sofa Bed", "Loveseat", "Chaise", "Chesterfield", "Lawson", "Tuxedo", "Mid-Century", "English Roll Arm", "Bridgewater", "Camelback", "Cabriole", "Divan", "Settee", "Daybed Sofa", "Power Recliner", "Modular Sofa", "Curved Sofa", "Outdoor Sofa"] },
+    { name: "Lighting", image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&q=80&w=800", subcategories: ["Pendant", "Chandelier", "Floor Lamp", "Table Lamp", "Wall Sconce", "Flush Mount", "Semi-Flush", "Track Lighting", "Recessed", "Desk Lamp", "Nightstand Lamp", "Arc Lamp", "Tripod Lamp", "Industrial Pendant", "Crystal Chandelier", "Smart Lighting", "String Lights", "Outdoor Lanterns", "Path Lighting", "Picture Lights"] },
+    { name: "Storage", image: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&q=80&w=800", subcategories: ["Bookshelf", "TV Stand", "Cabinet", "Sideboard", "Dresser", "Chest of Drawers", "Credenza", "Hutch", "Pantry", "Shoe Rack", "Wine Rack", "Trunk", "Floating Shelves", "Ottoman with Storage", "Wall Unit", "Media Console", "Bathroom Cabinet", "Drawer Unit", "Cube Storage", "Ladder Shelf"] },
+    { name: "Decor", image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800", subcategories: ["Mirrors", "Rugs", "Vases", "Art", "Planters", "Statues", "Wall Clocks", "Trays", "Candles", "Curtains", "Throw Pillows", "Blankets", "Table Runners", "Picture Frames", "Tapestry", "Decorative Boxes", "Bookends", "Sculptures", "Wall Decals", "Fragrance"] },
+    { name: "Outdoor", image: "https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&q=80&w=800", subcategories: ["Patio Set", "Sun Lounger", "Outdoor Sofa", "Hammock", "Fire Pit", "Garden Bench", "Porch Swing", "Bistro Set", "Picnic Table", "Gazebo", "Pergola", "Outdoor Dining", "Deck Chairs", "Poolside Bed", "BBQ Cart", "Solar Path Lights", "Outdoor Rugs", "Planter Box", "Umbrella", "Patio Heater"] }
 ];
 
 export default function Products() {
@@ -118,7 +118,7 @@ export default function Products() {
                                         <div className="absolute top-full left-0 w-48 bg-[#1a3838] border border-white/5 shadow-2xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                                             <Link href="/about" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-yellow-400 text-sm">About Us</Link>
                                             <Link href="/team" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-yellow-400 text-sm">Team</Link>
-                                            <Link href="/testimonial" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-yellow-400 text-sm">Testimonial</Link>
+                                            <Link href="/testimonials" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-yellow-400 text-sm">Testimonials</Link>
                                             <Link href="/blog" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-yellow-400 text-sm">Blog</Link>
                                             <Link href="/faq" className="block px-6 py-2 hover:bg-[#244d4d] hover:text-yellow-400 text-sm">FAQ</Link>
                                         </div>
@@ -195,9 +195,9 @@ export default function Products() {
                             filteredCategories.map((category) => (
                                 <div
                                     key={category.name}
-                                    className="min-w-[300px] h-[450px] flex-shrink-0 bg-white shadow-sm border border-gray-100 rounded-sm text-center p-4 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group snap-start flex flex-col"
+                                    className="min-w-full sm:min-w-[450px] min-h-[600px] bg-white shadow-sm border border-gray-100 rounded-sm p-6 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group snap-start flex flex-col"
                                 >
-                                    <div className="w-full flex-1 relative overflow-hidden rounded mb-4">
+                                    <div className="w-full h-[250px] relative overflow-hidden rounded mb-6 shrink-0">
                                         <Image
                                             src={category.image}
                                             alt={category.name}
@@ -207,16 +207,16 @@ export default function Products() {
                                         <div className="absolute inset-0 bg-black/5 group-hover:bg-black/20 transition-colors duration-500"></div>
                                     </div>
                                     <Link href={`/products/${category.name.toLowerCase()}`}>
-                                        <h3 className="text-2xl font-bold font-serif text-[#1a1a1a] hover:text-[#a58d71] transition-colors mb-4 cursor-pointer">
+                                        <h3 className="text-3xl font-bold font-serif text-[#1a1a1a] hover:text-[#a58d71] transition-colors mb-6 cursor-pointer text-center">
                                             {category.name}
                                         </h3>
                                     </Link>
-                                    <div className="flex flex-wrap justify-center gap-2 mt-auto">
+                                    <div className="flex flex-wrap justify-center gap-2 overflow-y-auto max-h-[300px] pb-2 custom-scrollbar">
                                         {category.subcategories.map((sub, idx) => (
                                             <Link
                                                 key={idx}
                                                 href={`/products/${category.name.toLowerCase()}/${sub.toLowerCase().replace(/\s+/g, '-')}`}
-                                                className="text-[10px] bg-gray-50 text-gray-500 px-3 py-1.5 rounded-full hover:bg-[#244d4d] hover:text-white transition-all cursor-pointer font-bold uppercase tracking-widest border border-gray-200"
+                                                className="text-[10px] bg-[#f8f9fa] text-gray-400 px-4 py-2 rounded-sm hover:bg-[#244d4d] hover:text-white transition-all cursor-pointer font-bold uppercase tracking-widest border border-gray-100"
                                             >
                                                 {sub}
                                             </Link>

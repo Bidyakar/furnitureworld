@@ -6,9 +6,9 @@ import ScrollReveal from "./scroll-reveal";
 
 const Hero = () => {
     return (
-        <section className="relative w-full min-h-[90vh] bg-[#244d4d] overflow-hidden flex items-center justify-center">
+        <section className="relative w-full min-h-[90vh] bg-[#244d4d] overflow-hidden flex items-center justify-center ">
             {/* Background Arch Image */}
-            <div className="absolute top-[10%] w-[90vw] md:w-[60vw] lg:w-[700px] h-[90vh]  overflow-hidden z-0">
+            <div className="absolute top-[10%] w-[90vw] md:w-[60vw] lg:w-[700px] h-[90vh]  overflow-hidden z-0 ">
                 <Image
                     src="/images/lr4.jpg"
                     alt="Living Room Furniture"
