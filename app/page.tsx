@@ -504,7 +504,7 @@ export default function Products() {
                 {/* Heading + View All */}
                 <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-2">
                   <h2 className="text-3xl md:text-4xl lg:text-[2.6rem] font-bold font-serif text-[#1a3838] leading-tight">
-                    Read More
+                    Read Our Blogs
                   </h2>
                   <Link
                     href="/blog"
