@@ -10,7 +10,7 @@ const categories = [
     title: "Beds",
     href: "/products/beds",
     description: "Discover elegant bed frames and mattresses for a perfect night's sleep.",
-    image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&q=80&w=800",
+    image: "/images/lr1.jpg",
   },
   {
     id: "chair",
@@ -31,7 +31,7 @@ const categories = [
     title: "Tables",
     href: "/products/tables",
     description: "Crafted dining and coffee tables that form the centerpiece of any room.",
-    image: "https://images.unsplash.com/photo-1533090481728-8bbf94252827?auto=format&fit=crop&q=80&w=800"
+    image: "/images/lr2.jpg"
   },
   {
     id: "cabinet",
@@ -50,7 +50,7 @@ const categories = [
 ];
 
 export default function WhatWeProvideGrid() {
-  const [activeIndex, setActiveIndex] = useState(2); // Default to Sofa
+  const [activeIndex, setActiveIndex] = useState(2);
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
@@ -63,10 +63,10 @@ export default function WhatWeProvideGrid() {
               className="group block"
               onMouseEnter={() => setActiveIndex(idx)}
             >
-              <h3 className={`font-bold text-xl transition-colors ${activeIndex === idx ? 'text-[#a58d71]' : 'text-black group-hover:text-[#a58d71]'}`}>
+              <h3 className={`font-bold font-serif text-2xl transition-colors ${activeIndex === idx ? 'text-[#a58d71]' : 'text-black group-hover:text-[#a58d71]'}`}>
                 {item.title}
               </h3>
-              <p className="text-gray-500 text-sm mt-2">
+              <p className="text-gray-500 font-playfair-display text-sm mt-2">
                 {item.description}
               </p>
             </Link>
@@ -77,7 +77,7 @@ export default function WhatWeProvideGrid() {
 
       {/* CENTER IMAGE */}
       <div className="flex justify-center">
-        <div className="relative w-[320px] h-[400px] md:w-[400px] md:h-[500px] overflow-hidden rounded-sm shadow-xl cursor-pointer">
+        <div className="relative w-[320px] h-[400px] md:w-[400px] md:h-[500px] overflow-hidden rounded-sm shadow-2xl cursor-pointer">
           {categories.map((item, idx) => (
             <div
               key={`img-${item.id}`}
@@ -105,10 +105,10 @@ export default function WhatWeProvideGrid() {
                 className="group block"
                 onMouseEnter={() => setActiveIndex(globalIdx)}
               >
-                <h3 className={`font-bold text-xl transition-colors ${activeIndex === globalIdx ? 'text-[#a58d71]' : 'text-black group-hover:text-[#a58d71]'}`}>
+                <h3 className={`font-bold font-serif text-2xl transition-colors ${activeIndex === globalIdx ? 'text-[#a58d71]' : 'text-black group-hover:text-[#a58d71]'}`}>
                   {item.title}
                 </h3>
-                <p className="text-gray-500 text-sm mt-2">
+                <p className="text-gray-500 font-playfair-display text-sm mt-2">
                   {item.description}
                 </p>
               </Link>

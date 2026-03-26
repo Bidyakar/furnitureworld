@@ -9,6 +9,34 @@ import WhatWeProvideGrid from "./components/what-we-provide-grid";
 import { CartItem, useCart } from "./components/cart-context";
 import CartDrawer from "./components/cart-drawer";
 
+const products = [
+  {
+    id: 1,
+    title: "Modern Kitchen Design",
+    description: "Premium furniture for your kitchen",
+    image: "/images/lr1.jpg",
+  },
+  {
+    id: 2,
+    title: "Bedroom Retreat",
+    description: "Elegant furniture for your bedroom",
+    image: "/images/lr2.jpg",
+  },
+  {
+    id: 3,
+    title: "Living Room Accent",
+    description: "Premium furniture for your living room",
+    image: "/images/lr3.jpg",
+  },
+  {
+    id: 4,
+    title: "Dining Elegance",
+    description: "Premium furniture for your dining room",
+    image: "/images/lr4.jpg",
+  },
+
+];
+
 
 
 import React, { useState, useEffect } from "react";
@@ -271,18 +299,19 @@ export default function Products() {
                 <TextReveal delay={300}>We are passionate about creating aesthetic, highly functional and modern furniture for those who want to elevate their living spaces. Our approach combines traditional craftsmanship with contemporary design principles.</TextReveal>
               </div>
               <ScrollReveal delay={400}>
-                <button className="px-10 py-4 bg-[#244d4d] text-white hover:bg-[#1a3838] transition-all duration-300 text-sm font-semibold tracking-widest uppercase shadow-xl rounded-sm">Learn More</button>
+                <button className="px-10 py-4 bg-[#244d4d] text-white hover:bg-[#1a3838] transition-all duration-300 text-sm font-semibold tracking-widest uppercase shadow-xl rounded-sm">
+                  <Link href="/about">Learn More</Link></button>
               </ScrollReveal>
             </div>
           </div>
         </div>
 
-        {/* Services Section */}
+        {/* Products Section */}
         <div className="bg-white py-24 md:py-32">
           <div className="max-w-[1320px] mx-auto px-6">
             <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-16 gap-8 text-center md:text-left">
               <div className="max-w-2xl">
-                <TextReveal className="text-[#a58d71] uppercase font-bold tracking-widest text-sm mb-4">Our Services</TextReveal>
+                <TextReveal className="text-[#a58d71] uppercase font-bold tracking-widest text-sm mb-4">Our Products</TextReveal>
                 <h2 className="text-[#2d2d2d] text-4xl sm:text-5xl font-serif font-bold leading-tight">
                   <TextReveal>We provide different types</TextReveal>
                   <TextReveal delay={100}>of Furniture Solutions</TextReveal>
@@ -290,22 +319,22 @@ export default function Products() {
               </div>
               <ScrollReveal delay={200}>
                 <Link href="/products">
-                  <button className="px-10 py-4 bg-[#244d4d] text-white hover:bg-[#1a3838] transition-all duration-300 text-sm font-semibold tracking-widest uppercase flex-shrink-0 shadow-xl rounded-sm">View All Services</button>
+                  <button className="px-10 py-4 bg-[#244d4d] text-white hover:bg-[#1a3838] transition-all duration-300 text-sm font-semibold tracking-widest uppercase flex-shrink-0 shadow-xl rounded-sm">View All Products</button>
                 </Link>
               </ScrollReveal>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {services.map((service, index) => (
+              {products.map((product, index) => (
                 <div key={index} className="group cursor-pointer flex flex-col h-full bg-[#f8f9fa] p-5 rounded-md hover:shadow-2xl transition-all duration-500">
                   <div className="relative h-64 w-full overflow-hidden mb-6 rounded-sm">
-                    <Image src={service.img} alt={service.title} fill className="object-cover transition-transform duration-700 group-hover:scale-110" revealDelay={(index + 1) * 100} />
+                    <Image src={product.image} alt={product.title} fill className="object-cover transition-transform duration-700 group-hover:scale-110" revealDelay={(index + 1) * 100} />
                     <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors duration-500"></div>
                   </div>
                   <h3 className="text-2xl font-serif font-bold text-[#2d2d2d] mb-3 group-hover:text-[#244d4d] transition-colors">
-                    <TextReveal delay={index * 50}>{service.title}</TextReveal>
+                    <TextReveal delay={index * 50}>{product.title}</TextReveal>
                   </h3>
                   <div className="text-gray-500 leading-relaxed mb-8 text-sm flex-grow">
-                    <TextReveal delay={index * 75}>{service.description}</TextReveal>
+                    <TextReveal delay={index * 75}>{product.description}</TextReveal>
                   </div>
                   <div className="w-12 h-1 bg-[#a58d71] group-hover:w-full transition-all duration-500 mb-2"></div>
                 </div>
@@ -319,7 +348,7 @@ export default function Products() {
           <div className="bg-white py-20">
             <div className="max-w-[1300px] mx-auto px-6">
               <div className="text-center mb-16">
-                <h2 className="text-[#244d4d] text-4xl md:text-5xl font-serif font-bold leading-tight">
+                <h2 className="text-[#244d4d] text-5xl md:text-6xl font-serif font-bold leading-tight">
                   <TextReveal>What we provide in</TextReveal>
                   <TextReveal delay={100}>Furniture World</TextReveal>
                 </h2>
@@ -475,10 +504,10 @@ export default function Products() {
                 {/* Heading + View All */}
                 <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-2">
                   <h2 className="text-3xl md:text-4xl lg:text-[2.6rem] font-bold font-serif text-[#1a3838] leading-tight">
-                    Explore our latest <span className="italic">Products</span>
+                    Read More
                   </h2>
                   <Link
-                    href="/projects"
+                    href="/blog"
                     className="self-start sm:self-auto flex-shrink-0 px-6 py-3 border border-[#1a3838] text-[#1a3838] font-semibold text-sm tracking-widest uppercase hover:bg-[#1a3838] hover:text-white transition-all duration-300"
                   >
                     View All
