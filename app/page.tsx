@@ -463,15 +463,15 @@ export default function Products() {
                 <div className="relative group overflow-hidden aspect-[4/3] cursor-pointer">
                   <Image
                     src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80&w=800"
-                    alt="Modern Kitchen Design"
+                    alt="Modern Furniture Design"
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                   <div className="absolute bottom-0 left-6 mb-6">
                     <div className="bg-white/90 backdrop-blur-sm px-6 py-4 max-w-[320px]">
-                      <h3 className="text-lg font-bold font-serif text-[#1a3838]">Modern Kitchen Design</h3>
-                      <p className="text-sm text-gray-500 mt-1">Decoral is one of the most popular for</p>
+                      <h3 className="text-lg font-bold font-serif text-[#1a3838]">Modern Furniture Design</h3>
+                      <p className="text-sm text-gray-500 mt-1">Furniture Design</p>
                     </div>
                   </div>
                 </div>
