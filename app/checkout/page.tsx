@@ -54,17 +54,17 @@ export default function CheckoutPage() {
             {isSuccess && (
                 <div className="fixed inset-0 z-[100] bg-[#244d4d] flex items-center justify-center p-6">
                     <div className="max-w-xl w-full text-center text-white flex flex-col items-center gap-8">
-                        <div className="w-24 h-24 border-2 border-yellow-400 rounded-full flex items-center justify-center mb-4">
-                            <svg className="w-12 h-12 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div className="w-24 h-24 border-2 border-[#a58d71] rounded-full flex items-center justify-center mb-4">
+                            <svg className="w-12 h-12 text-[#a58d71]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
                             </svg>
                         </div>
-                        <h2 className="text-5xl md:text-7xl font-bold italic tracking-tight">Payment <span className="text-yellow-400">Successful!</span></h2>
+                        <h2 className="text-5xl md:text-7xl font-bold italic tracking-tight">Payment <span className="text-[#a58d71]">Successful!</span></h2>
                         <p className="text-white/70 text-lg max-w-md mx-auto leading-relaxed">
                             Your artisan collection is now being meticulously prepared for delivery. A confirmation email has been sent to your inbox.
                         </p>
                         <div className="pt-8 flex flex-col sm:flex-row gap-6 w-full max-w-sm mx-auto">
-                            <Link href="/" className="flex-1 py-5 bg-white text-[#244d4d] text-sm font-bold uppercase tracking-widest hover:bg-yellow-400 transition-all">Go to Home</Link>
+                            <Link href="/" className="flex-1 py-5 bg-white text-[#244d4d] text-sm font-bold uppercase tracking-widest hover:bg-[#a58d71] transition-all">Go to Home</Link>
                             <Link href="/products" className="flex-1 py-5 border border-white/20 text-white text-sm font-bold uppercase tracking-widest hover:bg-white/10 transition-all">Return to Catalog</Link>
                         </div>
                     </div>

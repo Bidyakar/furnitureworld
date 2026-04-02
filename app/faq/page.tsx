@@ -59,8 +59,8 @@ export default function FAQPage() {
                 </div>
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 z-10 h-2xl">
                     <ScrollReveal>
-                        <span className="text-yellow-400 uppercase tracking-[0.4em] font-bold text-xs mb-4 block">Information Center</span>
-                        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">Frequently Asked <span className="italic text-yellow-500/80">Questions</span></h1>
+                        <span className="text-[#a58d71] uppercase tracking-[0.4em] font-bold text-xs mb-4 block">Information Center</span>
+                        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">Frequently Asked <span className="italic text-[#a58d71]/80">Questions</span></h1>
                         <div className="flex items-center justify-center gap-3 text-white/60 text-sm uppercase tracking-widest font-sans font-bold">
                             <Link href="/" className="hover:text-white transition-colors">Home</Link>
                             <span>/</span>
@@ -98,7 +98,7 @@ export default function FAQPage() {
                 </div>
 
                 <div className="mt-20 p-10 bg-[#244d4d] text-center text-white rounded-sm shadow-2xl relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-400 opacity-10 blur-3xl" />
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-[#a58d71] opacity-10 blur-3xl" />
                     <h3 className="text-2xl font-bold mb-4">Still have questions?</h3>
                     <p className="text-white/60 mb-8 font-sans">Our support team is available 24/7 to assist you with your artisan selection.</p>
                     <Link href="/contact" className="inline-block px-10 py-4 border border-white/20 hover:bg-white hover:text-[#244d4d] transition-all font-bold uppercase tracking-[0.2em] text-xs">

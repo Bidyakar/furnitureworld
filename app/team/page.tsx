@@ -1,5 +1,4 @@
-import Team from "../components/team"; // Note: this is actually the Team component despite the filename
-
+import Team from "../components/team";
 export default function TeamPage() {
   return (
     <main>
